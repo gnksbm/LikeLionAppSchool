@@ -9,7 +9,59 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let quizView = QuizView()
+//    let quizView = QuizView()
+    let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    let label1: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     //MARK: - Data
     var randomNumber1: Int = Int.random(in: 1...10) {
@@ -82,7 +134,7 @@ class ViewController: UIViewController {
         self.view.addSubview(quizView.resetButton)
         
         NSLayoutConstraint.activate([
-            quizView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            label1.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 20),
         ])
     }
     

@@ -13,6 +13,9 @@
 		8E0702CB2A43D04500BF3817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0702C92A43D04500BF3817 /* Main.storyboard */; };
 		8E0702CD2A43D04700BF3817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0702CC2A43D04700BF3817 /* Assets.xcassets */; };
 		8E0702D02A43D04700BF3817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0702CE2A43D04700BF3817 /* LaunchScreen.storyboard */; };
+		8E5B901D2A4407C00014D930 /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5B901B2A4407C00014D930 /* QuizData.swift */; };
+		8E5B904A2A442D170014D930 /* ButtonTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5B90482A442D170014D930 /* ButtonTVCell.swift */; };
+		8E5B904B2A442D170014D930 /* ButtonTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B90492A442D170014D930 /* ButtonTVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		8E0702CC2A43D04700BF3817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0702CF2A43D04700BF3817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E0702D12A43D04700BF3817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E5B901B2A4407C00014D930 /* QuizData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
+		8E5B90482A442D170014D930 /* ButtonTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonTVCell.swift; path = ../ButtonTVCell.swift; sourceTree = "<group>"; };
+		8E5B90492A442D170014D930 /* ButtonTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,24 @@
 			children = (
 				8E0702C32A43D04500BF3817 /* AppDelegate.swift */,
 				8E0702C52A43D04500BF3817 /* SceneDelegate.swift */,
+				8E5B901E2A4407D60014D930 /* Model */,
 				8E0702C72A43D04500BF3817 /* ViewController.swift */,
+				8E5B90482A442D170014D930 /* ButtonTVCell.swift */,
+				8E5B90492A442D170014D930 /* ButtonTVCell.xib */,
 				8E0702C92A43D04500BF3817 /* Main.storyboard */,
 				8E0702CC2A43D04700BF3817 /* Assets.xcassets */,
 				8E0702CE2A43D04700BF3817 /* LaunchScreen.storyboard */,
 				8E0702D12A43D04700BF3817 /* Info.plist */,
 			);
 			path = MultipleChoiceQuizKit;
+			sourceTree = "<group>";
+		};
+		8E5B901E2A4407D60014D930 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E5B901B2A4407C00014D930 /* QuizData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +145,7 @@
 				8E0702D02A43D04700BF3817 /* LaunchScreen.storyboard in Resources */,
 				8E0702CD2A43D04700BF3817 /* Assets.xcassets in Resources */,
 				8E0702CB2A43D04500BF3817 /* Main.storyboard in Resources */,
+				8E5B904B2A442D170014D930 /* ButtonTVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0702C82A43D04500BF3817 /* ViewController.swift in Sources */,
+				8E5B904A2A442D170014D930 /* ButtonTVCell.swift in Sources */,
 				8E0702C42A43D04500BF3817 /* AppDelegate.swift in Sources */,
+				8E5B901D2A4407C00014D930 /* QuizData.swift in Sources */,
 				8E0702C62A43D04500BF3817 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

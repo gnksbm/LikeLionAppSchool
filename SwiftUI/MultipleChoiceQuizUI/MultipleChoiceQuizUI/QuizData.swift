@@ -8,10 +8,12 @@
 import Foundation
 
 struct Quiz: Identifiable {
-//    var quizNumber: Int = 1
-//    var score: Int = 0
-//    var isCorrect: [Bool] = [true]
-//    var quizDone: Bool = false
+    static var quizNumber: Int = 1
+    static var score: Int = 0
+// isCorrect는 이전 문제로 가기 버튼을 사용해 돌아갈 때 스코어를 관리하기 위해 필요
+    static var isCorrectAnswers: [Bool] = []
+//    static var level: Int = 1
+    
     
     var id:UUID = UUID()
     var question: String

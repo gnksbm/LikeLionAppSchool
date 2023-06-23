@@ -92,10 +92,18 @@ fileprivate struct FallingRaindrop: View {
 /***********************************************/
 
 // from P274_RaindropShape
-fileprivate struct Raindrop: View {
+//fileprivate
+struct Raindrop: View {
     var body: some View {
         RaindropShape()
             .fill(LinearGradient(colors: [.blue.opacity(0.2), .blue], startPoint: .top, endPoint: .bottom))
+    }
+}
+
+struct Bloodrop: View {
+    var body: some View {
+        RaindropShape()
+            .fill(LinearGradient(colors: [.blue.opacity(0.2), .pink], startPoint: .top, endPoint: .bottom))
     }
 }
 

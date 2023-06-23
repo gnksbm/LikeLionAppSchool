@@ -11,7 +11,7 @@ import SwiftUI
 struct MultipleChoiceQuizUIApp: App {
     
     init() {
-        Thread.sleep(forTimeInterval: 1.1)
+        Thread.sleep(forTimeInterval: 0.7)
         }
     var body: some Scene {
         WindowGroup {

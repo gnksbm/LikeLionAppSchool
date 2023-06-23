@@ -10,7 +10,7 @@ import AVFoundation
 
 struct ContentView: View {
     // 퀴즈정보
-    @State var quizNumber: Int = 1
+//    @State var quizNumber: Int = 1
     @State var score: Int = 0
     // isCorrect는 이전 문제로 가기 버튼을 사용해 돌아갈 때 스코어를 관리하기 위해 필요
     @State var isCorrect: [Bool] = []
@@ -19,7 +19,9 @@ struct ContentView: View {
     @State var hintButton = false
     @State var hintButtonString = "Hint"
     @State var hwansAccount = ""
-    @State var getMoney = true
+    @State var showAccount = false
+    @State var answerArray = quizArray[Quiz.quizNumber - 1].choices.shuffled()
+    @State var isTear = false
     
     let speechSynth = AVSpeechSynthesizer()
     
@@ -28,24 +30,27 @@ struct ContentView: View {
             if !goNextStep {
                 HStack {
                     Group {
-                        Button(action: {
-                            guard quizNumber > 1 else { return }
-                            quizNumber -= 1
-                            let remove = isCorrect.remove(at: isCorrect.endIndex - 1)
-                            if remove {
-                                score -= 1
-                            }
-                        }, label: {
-                            Label {
-                                Text("back")
-                            } icon: {
-                                Image(systemName: "chevron.backward.circle.fill")
-                            }
-                        })
-                        .padding()
-                        .foregroundColor(.white)
-                        .font(.title2)
-                        .fontWeight(.bold)
+                        if Quiz.quizNumber != 1 {
+                            Button(action: {
+                                //                                guard Quiz.quizNumber > 1 else { return }
+                                Quiz.quizNumber -= 1
+                                answerArray = quizArray[Quiz.quizNumber - 1].choices.shuffled()
+                                let remove = isCorrect.remove(at: isCorrect.endIndex - 1)
+                                if remove {
+                                    score -= 1
+                                }
+                            }, label: {
+                                Label {
+                                    Text("back")
+                                } icon: {
+                                    Image(systemName: "chevron.backward.circle.fill")
+                                }
+                            })
+                            .padding()
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                        }
                         Spacer()
                         Text("score \(score)")
                             .foregroundColor(.pink)
@@ -65,7 +70,6 @@ struct ContentView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                
                 Button(hintButtonString) {
                     hintButton.toggle()
                     if hintButton {
@@ -74,17 +78,31 @@ struct ContentView: View {
                         hintButtonString = "Hint"
                     }
                 }
-                
                 .foregroundColor(.white)
                 .fontWeight(.heavy)
+                if isTear {
+                    Group {
+                        Raindrop()
+                            .frame(width: 16, height: 32)
+                            .offset(x: 80, y: -10)
+                        Bloodrop()
+                            .frame(width: 4, height: 32)
+                            .offset(x: 110, y: -10)
+                        Raindrop()
+                            .frame(width: 8, height: 16)
+                            .offset(x: 145, y: -72)
+                    }
+                }
+                
+                
                 Spacer()
-                ProgressView("\(quizNumber) / \(quizArray.count)", value: Double(quizNumber), total: Double(quizArray.count))
+                ProgressView("\(Quiz.quizNumber) / \(quizArray.count)", value: Double(Quiz.quizNumber), total: Double(quizArray.count))
                     .accentColor(.pink)
                     .padding()
                     .foregroundColor(.white)
                 Group {
-                    if quizNumber != quizArray.count{
-                        Text(quizArray[quizNumber - 1].question)
+                    if Quiz.quizNumber != quizArray.count{
+                        Text(quizArray[Quiz.quizNumber - 1].question)
                             .padding()
                             .font(.title3)
                             .fontWeight(.bold)
@@ -92,9 +110,10 @@ struct ContentView: View {
                             .multilineTextAlignment(.center)
                             .shadow(radius: 5)
                             .shadow(color: .white, radius: 5)
-                        ForEach(quizArray[quizNumber - 1].choices.shuffled(), id: \.self) { choice in
+                        ForEach(answerArray, id: \.self) { choice in
                             Button(choice) {
-                                let result = choice == quizArray[quizNumber - 1].correctChoice
+                                let result = choice == quizArray[Quiz.quizNumber - 1].correctChoice
+                                isTear = !result
                                 if result {
                                     score += 1
                                     let speechString = AVSpeechUtterance(string: "나이스")
@@ -103,9 +122,10 @@ struct ContentView: View {
                                     let speechString = AVSpeechUtterance(string: "땡")
                                     speechSynth.speak(speechString)
                                 }
-                                if quizNumber < 10 {
+                                if Quiz.quizNumber < 10 {
                                     isCorrect.append(result)
-                                    quizNumber += 1
+                                    Quiz.quizNumber += 1
+                                    answerArray = quizArray[Quiz.quizNumber - 1].choices.shuffled()
                                 }
                             }
                             .foregroundColor(.white)
@@ -122,19 +142,34 @@ struct ContentView: View {
                         Text("다음 단계로 넘어가세요")
                             .foregroundColor(.white)
                             .font(.title2)
-                        Button("Next Level") {
-                            goNextStep = true
-                        }
-                            .padding()
+                        HStack {
+                            Spacer()
+                            Button("Reset") {
+                                isCorrect = []
+                                score = 0
+                                Quiz.quizNumber = 1
+                            }
+                            .foregroundColor(.white)
+                            Spacer()
+                            Button("Next Level") {
+                                goNextStep = true
+                            }
                             .foregroundColor(.pink)
+                            Spacer()
+                        }
+                        .fontWeight(.heavy)
+                        .padding()
+                        
                     }
                 }
                 Spacer()
             } else {
-                P275_Raining()
-                if getMoney {
+                if !showAccount {
                     Spacer()
+                } else {
+                    P275_Raining()
                 }
+                
                 Text("다음 단계를 하시려면 결제해주세요")
                     .font(.largeTitle)
                     .fontWeight(.bold)
@@ -144,7 +179,7 @@ struct ContentView: View {
                 Spacer()
                 Button("$5,000") {
                     hwansAccount = "카카오뱅크\n103-5932-139058\n윤경환"
-                    getMoney = false
+                    showAccount = true
                     
                 }
                 .padding()
