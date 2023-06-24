@@ -10,9 +10,18 @@ import Foundation
 struct Quiz: Identifiable {
     static var quizNumber: Int = 1
     static var score: Int = 0
-// isCorrect는 이전 문제로 가기 버튼을 사용해 돌아갈 때 스코어를 관리하기 위해 필요
-    static var isCorrectAnswers: [Bool] = []
-//    static var level: Int = 1
+    static var isCorrectAnswers: [Bool] = [] {
+        didSet {
+            var score = 0
+            for isCorrectAnswer in isCorrectAnswers {
+                if isCorrectAnswer {
+                    score += 1
+                }
+                self.score = score
+            }
+        }
+    }
+    static var level: Int = 1
     
     
     var id:UUID = UUID()
@@ -25,6 +34,11 @@ struct Quiz: Identifiable {
         self.choices = choices
         self.correctChoice = correctChoice
         self.choices.append(correctChoice)
+    }
+    
+    static func resetQuiz() {
+        Self.isCorrectAnswers = []
+        Self.quizNumber = 1
     }
 }
 

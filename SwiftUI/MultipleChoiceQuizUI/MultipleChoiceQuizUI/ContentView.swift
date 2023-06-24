@@ -9,13 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct ContentView: View {
-    // 퀴즈정보
-//    @State var quizNumber: Int = 1
-    @State var score: Int = 0
-    // isCorrect는 이전 문제로 가기 버튼을 사용해 돌아갈 때 스코어를 관리하기 위해 필요
-    @State var isCorrect: [Bool] = []
-    // 화면정보
-    @State var goNextStep = false
+    
     @State var hintButton = false
     @State var hintButtonString = "Hint"
     @State var hwansAccount = ""
@@ -27,18 +21,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            if !goNextStep {
+            if Quiz.level == 1 {
                 HStack {
                     Group {
                         if Quiz.quizNumber != 1 {
                             Button(action: {
-                                //                                guard Quiz.quizNumber > 1 else { return }
                                 Quiz.quizNumber -= 1
                                 answerArray = quizArray[Quiz.quizNumber - 1].choices.shuffled()
-                                let remove = isCorrect.remove(at: isCorrect.endIndex - 1)
-                                if remove {
-                                    score -= 1
-                                }
+                                let remove = Quiz.isCorrectAnswers.remove(at: Quiz.isCorrectAnswers.endIndex - 1)
                             }, label: {
                                 Label {
                                     Text("back")
@@ -52,15 +42,15 @@ struct ContentView: View {
                             .fontWeight(.bold)
                         }
                         Spacer()
-                        Text("score \(score)")
-                            .foregroundColor(.pink)
+                        Text("score \(Quiz.score)")
+                            .foregroundColor(Color("HwanTintColor"))
                             .font(.title3)
                             .fontWeight(.bold)
                             .padding()
                     }
                 }
                 Text("경환 연애 시뮬레이션")
-                    .foregroundColor(.pink)
+                    .foregroundColor(Color("HwanTintColor"))
                     .font(.title2)
                     .fontWeight(.bold)
                     .shadow(radius: 5)
@@ -82,26 +72,26 @@ struct ContentView: View {
                 .fontWeight(.heavy)
                 if isTear {
                     Group {
-                        Raindrop()
-                            .frame(width: 16, height: 32)
-                            .offset(x: 80, y: -10)
+                        HStack {
+                            Raindrop()
+                                .frame(width: 16, height: 32)
+                                .offset(x: 90, y: 33)
+                            Raindrop()
+                                .frame(width: 8, height: 16)
+                                .offset(x: 130, y: 42)
+                        }
                         Bloodrop()
-                            .frame(width: 4, height: 32)
-                            .offset(x: 110, y: -10)
-                        Raindrop()
-                            .frame(width: 8, height: 16)
-                            .offset(x: 145, y: -72)
+                            .frame(width: 4, height: 26)
+                            .offset(x: 115, y: 30)
                     }
                 }
-                
-                
                 Spacer()
                 ProgressView("\(Quiz.quizNumber) / \(quizArray.count)", value: Double(Quiz.quizNumber), total: Double(quizArray.count))
-                    .accentColor(.pink)
+                    .accentColor(Color("HwanTintColor"))
                     .padding()
                     .foregroundColor(.white)
                 Group {
-                    if Quiz.quizNumber != quizArray.count{
+                    if Quiz.quizNumber != quizArray.count {
                         Text(quizArray[Quiz.quizNumber - 1].question)
                             .padding()
                             .font(.title3)
@@ -113,29 +103,27 @@ struct ContentView: View {
                         ForEach(answerArray, id: \.self) { choice in
                             Button(choice) {
                                 let result = choice == quizArray[Quiz.quizNumber - 1].correctChoice
-                                isTear = !result
                                 if result {
-                                    score += 1
                                     let speechString = AVSpeechUtterance(string: "나이스")
                                     speechSynth.speak(speechString)
                                 } else {
                                     let speechString = AVSpeechUtterance(string: "땡")
                                     speechSynth.speak(speechString)
                                 }
+                                isTear = !result
                                 if Quiz.quizNumber < 10 {
-                                    isCorrect.append(result)
+                                    Quiz.isCorrectAnswers.append(result)
                                     Quiz.quizNumber += 1
                                     answerArray = quizArray[Quiz.quizNumber - 1].choices.shuffled()
                                 }
                             }
                             .foregroundColor(.white)
-                            
                         }
                         .frame(width: 310)
                         .padding()
                         .shadow(radius: 5)
                         .shadow(color: .white, radius: 5)
-                        .background(LinearGradient(gradient: Gradient(colors: [.clear, .pink]), startPoint: .leading, endPoint: .trailing))
+                        .background(LinearGradient(gradient: Gradient(colors: [.clear, Color("HwanTintColor")]), startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(15.0)
                         .foregroundColor(.white)
                     } else {
@@ -145,16 +133,14 @@ struct ContentView: View {
                         HStack {
                             Spacer()
                             Button("Reset") {
-                                isCorrect = []
-                                score = 0
-                                Quiz.quizNumber = 1
+                                Quiz.resetQuiz()
                             }
                             .foregroundColor(.white)
                             Spacer()
                             Button("Next Level") {
-                                goNextStep = true
+                                Quiz.level += 1
                             }
-                            .foregroundColor(.pink)
+                            .foregroundColor(Color("HwanTintColor"))
                             Spacer()
                         }
                         .fontWeight(.heavy)
