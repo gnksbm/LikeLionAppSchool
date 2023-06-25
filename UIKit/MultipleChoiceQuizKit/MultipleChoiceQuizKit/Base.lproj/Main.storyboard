@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,14 +24,6 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="드디어 내일 애인과 첫 데이트를 하는 날이다. 애인에게 어떻게 연락할까?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wng-V6-Qcr">
-                                <rect key="frame" x="34" y="491" width="325" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="윤경환님은 무슨 답을 선택했을까요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKs-mH-IDc">
                                 <rect key="frame" x="34" y="212" width="325" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,7 +89,6 @@
                         <outlet property="headStackView" destination="Yjw-ZC-VBT" id="mDX-DV-CIe"/>
                         <outlet property="hintButton" destination="Y31-jj-jl0" id="bhb-Qw-gCb"/>
                         <outlet property="progressView" destination="JVF-gI-9cq" id="UZ3-VI-jNL"/>
-                        <outlet property="questionTextView" destination="Wng-V6-Qcr" id="fEZ-9N-eqA"/>
                         <outlet property="scoreLabel" destination="gxk-Vf-IEt" id="f03-R9-UFf"/>
                         <outlet property="subTitleLabel" destination="FKs-mH-IDc" id="Ics-Ze-QLz"/>
                         <outlet property="titleLabel" destination="jsz-pK-Xu1" id="b3J-XH-ODq"/>
@@ -109,9 +101,6 @@
     </scenes>
     <resources>
         <image name="chevron.backward.circle.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

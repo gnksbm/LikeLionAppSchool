@@ -21,19 +21,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
     
-    @IBOutlet weak var questionTextView: UITextView!
+    var answerArray = quizArray[Quiz.quizNumber - 1].choices.shuffled()
     
-    var buttonTableView: UITableView = {
+    lazy var buttonTableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = .clear
+        tableView.delegate = self
+        tableView.dataSource = self
+        // 셀 사이의 구분선 없애기
+        tableView.separatorStyle = .none
+        tableView.register(ButtonTVCell.self, forCellReuseIdentifier: ButtonTVCell.identifier)
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .black
         return tableView
     }()
     
-    var quizNumber: Int = 1
-    var score: Int = 0
-      // isCorrect는 이전 문제로 가기 버튼을 사용해 돌아갈 때 스코어를 관리하기 위해 필요
-    var isCorrect: [Bool] = []
       // 화면정보
     var goNextStep = false
     var isHintButton = false
@@ -54,16 +56,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setColor()
         configureUI()
-        setData()
     }
     
     func setColor() {
-
         backButton.tintColor = .white
         subTitleLabel.textColor = .white
         hintButton.tintColor = .white
-        questionTextView.backgroundColor = .clear
-        questionTextView.textColor = .white
     }
     
     func configureUI() {
@@ -72,9 +70,10 @@ class ViewController: UIViewController {
         self.view.addSubview(buttonTableView)
         
         NSLayoutConstraint.activate([
-            buttonTableView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            buttonTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100),
-            buttonTableView.topAnchor.constraint(equalTo: questionTextView.bottomAnchor, constant: 20),
+            buttonTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            buttonTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            buttonTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -10),
+            buttonTableView.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 10),
             
             imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
@@ -83,38 +82,14 @@ class ViewController: UIViewController {
         ])
     }
     
-    func setData() {
-        buttonTableView.delegate = self
-        buttonTableView.dataSource = self
-        let buttonCellNib = UINib(nibName: "ButtonTVCell", bundle: nil)
-        buttonTableView.register(buttonCellNib, forCellReuseIdentifier: "ButtonTVCell")
-        questionTextView.text = quizArray[quizNumber - 1].question
-            
-    }
-    
-    func buttonTapped(sender: UIButton) {
-        let result = sender.currentTitle == quizArray[quizNumber - 1].correctChoice
-        if result {
-            score += 1
-            let speechString = AVSpeechUtterance(string: "나이스")
-            speechSynth.speak(speechString)
-        } else {
-            let speechString = AVSpeechUtterance(string: "땡")
-            speechSynth.speak(speechString)
-        }
-        if quizNumber < 10 {
-            isCorrect.append(result)
-            quizNumber += 1
-        }
-    }
-    
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        guard quizNumber > 1 else { return }
-        quizNumber -= 1
-        let remove = isCorrect.remove(at: isCorrect.endIndex - 1)
+        guard Quiz.quizNumber > 1 else { return }
+        Quiz.quizNumber -= 1
+        let remove = Quiz.isCorrectAnswers.remove(at: Quiz.isCorrectAnswers.endIndex - 1)
         if remove {
-            score -= 1
+            Quiz.score -= 1
         }
+        buttonTableView.reloadData()
     }
     
     @IBAction func hintButtonTapped(_ sender: UIButton) {
@@ -129,35 +104,48 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        let result = sender.currentTitle == quizArray[quizNumber - 1].correctChoice
-//        if result {
-//            score += 1
-//            let speechString = AVSpeechUtterance(string: "나이스")
-//            speechSynth.speak(speechString)
-//        } else {
-//            let speechString = AVSpeechUtterance(string: "땡")
-//            speechSynth.speak(speechString)
-//        }
-//        if quizNumber < 10 {
-//            isCorrect.append(result)
-//            quizNumber += 1
-//        }
+        let result = quizArray[Quiz.quizNumber - 1].correctChoice == answerArray[indexPath.row]
+        if Quiz.quizNumber < 10 {
+            if result {
+                let speechString = AVSpeechUtterance(string: "나이스")
+                speechSynth.speak(speechString)
+            } else {
+                let speechString = AVSpeechUtterance(string: "땡")
+                speechSynth.speak(speechString)
+            }
+            Quiz.isCorrectAnswers.append(result)
+            Quiz.quizNumber += 1
+        }
+        tableView.reloadData()
     }
 }
 
 extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        quizArray[quizNumber - 1].choices.count
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let questionLabel: UILabel = {
+            let label = UILabel()
+            label.text = quizArray[Quiz.quizNumber - 1].question + "\n"
+            label.numberOfLines = 0
+            label.font = .boldSystemFont(ofSize: 18)
+            label.textAlignment = .center
+            return label
+        }()
+        return questionLabel
     }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        tableView.estimatedRowHeight
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        answerArray = quizArray[Quiz.quizNumber - 1].choices.shuffled()
+        return answerArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "ButtonTVCell", for: indexPath) as! ButtonTVCell
-        cell.buttonCellLabel.text = quizArray[quizNumber - 1].choices[indexPath.row]
+//        answerArray = quizArray[Quiz.quizNumber - 1].choices.shuffled()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonTVCell", for: indexPath) as! ButtonTVCell
+        cell.buttonCellLabel.text = answerArray[indexPath.row]
+        self.scoreLabel.text = "score \(Quiz.score)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        55
     }
 }
