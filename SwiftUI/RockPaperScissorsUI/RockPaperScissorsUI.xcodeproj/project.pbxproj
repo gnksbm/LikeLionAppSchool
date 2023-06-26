@@ -11,6 +11,7 @@
 		8E0F1ACF2A49622D00E9A610 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F1ACE2A49622D00E9A610 /* ContentView.swift */; };
 		8E0F1AD12A49622F00E9A610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0F1AD02A49622F00E9A610 /* Assets.xcassets */; };
 		8E0F1AD42A49622F00E9A610 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0F1AD32A49622F00E9A610 /* Preview Assets.xcassets */; };
+		8E8FC37E2A49CA6000AE3AF7 /* RPSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FC37D2A49CA6000AE3AF7 /* RPSModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		8E0F1ACE2A49622D00E9A610 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E0F1AD02A49622F00E9A610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0F1AD32A49622F00E9A610 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8E8FC37D2A49CA6000AE3AF7 /* RPSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RPSModel.swift; path = RockPaperScissorsUI/RPSModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				8E0F1ACC2A49622D00E9A610 /* RockPaperScissorsUIApp.swift */,
 				8E0F1ACE2A49622D00E9A610 /* ContentView.swift */,
+				8E8FC37D2A49CA6000AE3AF7 /* RPSModel.swift */,
 				8E0F1AD02A49622F00E9A610 /* Assets.xcassets */,
 				8E0F1AD22A49622F00E9A610 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0F1ACF2A49622D00E9A610 /* ContentView.swift in Sources */,
+				8E8FC37E2A49CA6000AE3AF7 /* RPSModel.swift in Sources */,
 				8E0F1ACD2A49622D00E9A610 /* RockPaperScissorsUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
