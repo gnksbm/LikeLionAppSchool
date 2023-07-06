@@ -13,10 +13,6 @@ class ToDoList: ObservableObject {
         ToDoData(toDoText: "완료한 일은 체크버튼을 눌러주세요"),
         ToDoData(toDoText: "삭제하고 싶은 일은 X 버튼을 눌러주세요"),
     ]
-    
-    func addList(toDoText: String) {
-        
-    }
 }
 
 struct ToDoData: Identifiable {

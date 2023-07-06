@@ -7,27 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E8FC3682A49C31E00AE3AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FC3672A49C31E00AE3AF7 /* AppDelegate.swift */; };
-		8E8FC36A2A49C31E00AE3AF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FC3692A49C31E00AE3AF7 /* SceneDelegate.swift */; };
-		8E8FC36C2A49C31E00AE3AF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FC36B2A49C31E00AE3AF7 /* ViewController.swift */; };
-		8E8FC3712A49C32000AE3AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FC3702A49C32000AE3AF7 /* Assets.xcassets */; };
-		8E8FC3742A49C32000AE3AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FC3722A49C32000AE3AF7 /* LaunchScreen.storyboard */; };
-		8E8FC37C2A49C33B00AE3AF7 /* RPSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FC37B2A49C33B00AE3AF7 /* RPSModel.swift */; };
+		8E25FC682A53E5CB003487A1 /* AppleDeviceUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25FC672A53E5CB003487A1 /* AppleDeviceUIApp.swift */; };
+		8E25FC6A2A53E5CB003487A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25FC692A53E5CB003487A1 /* ContentView.swift */; };
+		8E25FC6C2A53E5CD003487A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E25FC6B2A53E5CD003487A1 /* Assets.xcassets */; };
+		8E25FC6F2A53E5CD003487A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E25FC6E2A53E5CD003487A1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E8FC3642A49C31E00AE3AF7 /* RockPaperScissorsKit_NoSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissorsKit_NoSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E8FC3672A49C31E00AE3AF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E8FC3692A49C31E00AE3AF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E8FC36B2A49C31E00AE3AF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E8FC3702A49C32000AE3AF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E8FC3732A49C32000AE3AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8E8FC3752A49C32000AE3AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E8FC37B2A49C33B00AE3AF7 /* RPSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSModel.swift; sourceTree = "<group>"; };
+		8E25FC642A53E5CB003487A1 /* AppleDeviceUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleDeviceUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E25FC672A53E5CB003487A1 /* AppleDeviceUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDeviceUIApp.swift; sourceTree = "<group>"; };
+		8E25FC692A53E5CB003487A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8E25FC6B2A53E5CD003487A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E25FC6E2A53E5CD003487A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8E8FC3612A49C31E00AE3AF7 /* Frameworks */ = {
+		8E25FC612A53E5CB003487A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +32,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E8FC35B2A49C31E00AE3AF7 = {
+		8E25FC5B2A53E5CB003487A1 = {
 			isa = PBXGroup;
 			children = (
-				8E8FC3662A49C31E00AE3AF7 /* RockPaperScissorsKit_NoSB */,
-				8E8FC3652A49C31E00AE3AF7 /* Products */,
+				8E25FC662A53E5CB003487A1 /* AppleDeviceUI */,
+				8E25FC652A53E5CB003487A1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8E8FC3652A49C31E00AE3AF7 /* Products */ = {
+		8E25FC652A53E5CB003487A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E8FC3642A49C31E00AE3AF7 /* RockPaperScissorsKit_NoSB.app */,
+				8E25FC642A53E5CB003487A1 /* AppleDeviceUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E8FC3662A49C31E00AE3AF7 /* RockPaperScissorsKit_NoSB */ = {
+		8E25FC662A53E5CB003487A1 /* AppleDeviceUI */ = {
 			isa = PBXGroup;
 			children = (
-				8E8FC3672A49C31E00AE3AF7 /* AppDelegate.swift */,
-				8E8FC3692A49C31E00AE3AF7 /* SceneDelegate.swift */,
-				8E8FC36B2A49C31E00AE3AF7 /* ViewController.swift */,
-				8E8FC37B2A49C33B00AE3AF7 /* RPSModel.swift */,
-				8E8FC3702A49C32000AE3AF7 /* Assets.xcassets */,
-				8E8FC3722A49C32000AE3AF7 /* LaunchScreen.storyboard */,
-				8E8FC3752A49C32000AE3AF7 /* Info.plist */,
+				8E25FC672A53E5CB003487A1 /* AppleDeviceUIApp.swift */,
+				8E25FC692A53E5CB003487A1 /* ContentView.swift */,
+				8E25FC6B2A53E5CD003487A1 /* Assets.xcassets */,
+				8E25FC6D2A53E5CD003487A1 /* Preview Content */,
 			);
-			path = RockPaperScissorsKit_NoSB;
+			path = AppleDeviceUI;
+			sourceTree = "<group>";
+		};
+		8E25FC6D2A53E5CD003487A1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8E25FC6E2A53E5CD003487A1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E8FC3632A49C31E00AE3AF7 /* RockPaperScissorsKit_NoSB */ = {
+		8E25FC632A53E5CB003487A1 /* AppleDeviceUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E8FC3782A49C32000AE3AF7 /* Build configuration list for PBXNativeTarget "RockPaperScissorsKit_NoSB" */;
+			buildConfigurationList = 8E25FC722A53E5CD003487A1 /* Build configuration list for PBXNativeTarget "AppleDeviceUI" */;
 			buildPhases = (
-				8E8FC3602A49C31E00AE3AF7 /* Sources */,
-				8E8FC3612A49C31E00AE3AF7 /* Frameworks */,
-				8E8FC3622A49C31E00AE3AF7 /* Resources */,
+				8E25FC602A53E5CB003487A1 /* Sources */,
+				8E25FC612A53E5CB003487A1 /* Frameworks */,
+				8E25FC622A53E5CB003487A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RockPaperScissorsKit_NoSB;
-			productName = RockPaperScissorsKit_NoSB;
-			productReference = 8E8FC3642A49C31E00AE3AF7 /* RockPaperScissorsKit_NoSB.app */;
+			name = AppleDeviceUI;
+			productName = AppleDeviceUI;
+			productReference = 8E25FC642A53E5CB003487A1 /* AppleDeviceUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8E8FC35C2A49C31E00AE3AF7 /* Project object */ = {
+		8E25FC5C2A53E5CB003487A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					8E8FC3632A49C31E00AE3AF7 = {
+					8E25FC632A53E5CB003487A1 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 8E8FC35F2A49C31E00AE3AF7 /* Build configuration list for PBXProject "RockPaperScissorsKit_NoSB" */;
+			buildConfigurationList = 8E25FC5F2A53E5CB003487A1 /* Build configuration list for PBXProject "AppleDeviceUI" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 8E8FC35B2A49C31E00AE3AF7;
-			productRefGroup = 8E8FC3652A49C31E00AE3AF7 /* Products */;
+			mainGroup = 8E25FC5B2A53E5CB003487A1;
+			productRefGroup = 8E25FC652A53E5CB003487A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E8FC3632A49C31E00AE3AF7 /* RockPaperScissorsKit_NoSB */,
+				8E25FC632A53E5CB003487A1 /* AppleDeviceUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8E8FC3622A49C31E00AE3AF7 /* Resources */ = {
+		8E25FC622A53E5CB003487A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8FC3742A49C32000AE3AF7 /* LaunchScreen.storyboard in Resources */,
-				8E8FC3712A49C32000AE3AF7 /* Assets.xcassets in Resources */,
+				8E25FC6F2A53E5CD003487A1 /* Preview Assets.xcassets in Resources */,
+				8E25FC6C2A53E5CD003487A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8E8FC3602A49C31E00AE3AF7 /* Sources */ = {
+		8E25FC602A53E5CB003487A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8FC36C2A49C31E00AE3AF7 /* ViewController.swift in Sources */,
-				8E8FC3682A49C31E00AE3AF7 /* AppDelegate.swift in Sources */,
-				8E8FC36A2A49C31E00AE3AF7 /* SceneDelegate.swift in Sources */,
-				8E8FC37C2A49C33B00AE3AF7 /* RPSModel.swift in Sources */,
+				8E25FC6A2A53E5CB003487A1 /* ContentView.swift in Sources */,
+				8E25FC682A53E5CB003487A1 /* AppleDeviceUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		8E8FC3722A49C32000AE3AF7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E8FC3732A49C32000AE3AF7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		8E8FC3762A49C32000AE3AF7 /* Debug */ = {
+		8E25FC702A53E5CD003487A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -218,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		8E8FC3772A49C32000AE3AF7 /* Release */ = {
+		8E25FC712A53E5CD003487A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -272,18 +259,19 @@
 			};
 			name = Release;
 		};
-		8E8FC3792A49C32000AE3AF7 /* Debug */ = {
+		8E25FC732A53E5CD003487A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZV5P93XJVP;
+				DEVELOPMENT_ASSET_PATHS = "\"AppleDeviceUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RockPaperScissorsKit_NoSB/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -291,7 +279,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Beckim.RockPaperScissorsKit-NoSB";
+				PRODUCT_BUNDLE_IDENTIFIER = com.likeLion.AppleDeviceUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -299,18 +287,19 @@
 			};
 			name = Debug;
 		};
-		8E8FC37A2A49C32000AE3AF7 /* Release */ = {
+		8E25FC742A53E5CD003487A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZV5P93XJVP;
+				DEVELOPMENT_ASSET_PATHS = "\"AppleDeviceUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RockPaperScissorsKit_NoSB/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +307,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Beckim.RockPaperScissorsKit-NoSB";
+				PRODUCT_BUNDLE_IDENTIFIER = com.likeLion.AppleDeviceUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -329,25 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E8FC35F2A49C31E00AE3AF7 /* Build configuration list for PBXProject "RockPaperScissorsKit_NoSB" */ = {
+		8E25FC5F2A53E5CB003487A1 /* Build configuration list for PBXProject "AppleDeviceUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E8FC3762A49C32000AE3AF7 /* Debug */,
-				8E8FC3772A49C32000AE3AF7 /* Release */,
+				8E25FC702A53E5CD003487A1 /* Debug */,
+				8E25FC712A53E5CD003487A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E8FC3782A49C32000AE3AF7 /* Build configuration list for PBXNativeTarget "RockPaperScissorsKit_NoSB" */ = {
+		8E25FC722A53E5CD003487A1 /* Build configuration list for PBXNativeTarget "AppleDeviceUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E8FC3792A49C32000AE3AF7 /* Debug */,
-				8E8FC37A2A49C32000AE3AF7 /* Release */,
+				8E25FC732A53E5CD003487A1 /* Debug */,
+				8E25FC742A53E5CD003487A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8E8FC35C2A49C31E00AE3AF7 /* Project object */;
+	rootObject = 8E25FC5C2A53E5CB003487A1 /* Project object */;
 }
