@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol Battery {
+    var batteryCapacity: Int { get set }
+    var chargingCable: ChargingCable { get set }
+    var wirelessChargeable: Bool { get set }
+}

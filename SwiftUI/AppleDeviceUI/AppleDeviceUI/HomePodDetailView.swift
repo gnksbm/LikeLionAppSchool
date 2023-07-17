@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct HomePodDetailView: View {
     var imageUrl: String
     var deviceName: String
     var devicePrice: Int
@@ -18,8 +18,8 @@ struct SwiftUIView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct HomePodDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView(imageUrl: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQBu0wi1rSeSmrqqiOWVOCSKEc6rHFvly-cD65APXgJTGC1VdTPGLLWmO4WxIVb7OqxVzrvCt4&usqp=CAc", deviceName: "iPhone 14", devicePrice: 1340000)
+        HomePodDetailView(imageUrl: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQBu0wi1rSeSmrqqiOWVOCSKEc6rHFvly-cD65APXgJTGC1VdTPGLLWmO4WxIVb7OqxVzrvCt4&usqp=CAc", deviceName: "iPhone 14", devicePrice: 1340000)
     }
 }

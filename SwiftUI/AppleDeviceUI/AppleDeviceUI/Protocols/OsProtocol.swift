@@ -8,6 +8,12 @@
 import Foundation
 
 protocol OperatingSystem {
-    var osName: String { get set }
-    var latestOSVersion: Double { get set }
+    var os: Platform { get set }
+    var latestOSVersion: Double { get }
+}
+
+extension OperatingSystem {
+    var latestOSVersion: Double {
+        os.latestVersion
+    }
 }
