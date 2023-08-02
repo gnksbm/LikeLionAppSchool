@@ -13,6 +13,7 @@
 		8EA5CA782A7967C0001B2E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA5CA762A7967C0001B2E36 /* Main.storyboard */; };
 		8EA5CA7A2A7967C1001B2E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA5CA792A7967C1001B2E36 /* Assets.xcassets */; };
 		8EA5CA7D2A7967C1001B2E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA5CA7B2A7967C1001B2E36 /* LaunchScreen.storyboard */; };
+		8EA5CA852A7967DC001B2E36 /* NewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5CA842A7967DC001B2E36 /* NewPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8EA5CA792A7967C1001B2E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EA5CA7C2A7967C1001B2E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA5CA7E2A7967C1001B2E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EA5CA842A7967DC001B2E36 /* NewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		8EA5CA6F2A7967C0001B2E36 /* WebViewKit */ = {
 			isa = PBXGroup;
 			children = (
+				8EA5CA842A7967DC001B2E36 /* NewPreview.swift */,
 				8EA5CA702A7967C0001B2E36 /* AppDelegate.swift */,
 				8EA5CA722A7967C0001B2E36 /* SceneDelegate.swift */,
 				8EA5CA742A7967C0001B2E36 /* ViewController.swift */,
@@ -141,6 +144,7 @@
 				8EA5CA752A7967C0001B2E36 /* ViewController.swift in Sources */,
 				8EA5CA712A7967C0001B2E36 /* AppDelegate.swift in Sources */,
 				8EA5CA732A7967C0001B2E36 /* SceneDelegate.swift in Sources */,
+				8EA5CA852A7967DC001B2E36 /* NewPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
