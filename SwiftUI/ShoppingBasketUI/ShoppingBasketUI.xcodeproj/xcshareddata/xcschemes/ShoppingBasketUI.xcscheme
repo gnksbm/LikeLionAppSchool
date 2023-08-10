@@ -17,7 +17,7 @@
                BlueprintIdentifier = "8EADD6D92A7CB4260043AA70"
                BuildableName = "ShoppingBasketUI.app"
                BlueprintName = "ShoppingBasketUI"
-               ReferencedContainer = "container:ShoppingBasketUI1.xcodeproj">
+               ReferencedContainer = "container:ShoppingBasketUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,7 +46,7 @@
             BlueprintIdentifier = "8EADD6D92A7CB4260043AA70"
             BuildableName = "ShoppingBasketUI.app"
             BlueprintName = "ShoppingBasketUI"
-            ReferencedContainer = "container:ShoppingBasketUI1.xcodeproj">
+            ReferencedContainer = "container:ShoppingBasketUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,7 +63,7 @@
             BlueprintIdentifier = "8EADD6D92A7CB4260043AA70"
             BuildableName = "ShoppingBasketUI.app"
             BlueprintName = "ShoppingBasketUI"
-            ReferencedContainer = "container:ShoppingBasketUI1.xcodeproj">
+            ReferencedContainer = "container:ShoppingBasketUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userEmail.text = Auth.auth().currentUser?.email
+        print(Auth.auth().currentUser?.email)
     }
     
     

@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8EADD6D52A7CB4260043AA70 /* Build configuration list for PBXProject "ShoppingBasketUI1" */;
+			buildConfigurationList = 8EADD6D52A7CB4260043AA70 /* Build configuration list for PBXProject "ShoppingBasketUI" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -350,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8EADD6D52A7CB4260043AA70 /* Build configuration list for PBXProject "ShoppingBasketUI1" */ = {
+		8EADD6D52A7CB4260043AA70 /* Build configuration list for PBXProject "ShoppingBasketUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EADD6E62A7CB4270043AA70 /* Debug */,
