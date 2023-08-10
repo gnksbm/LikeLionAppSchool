@@ -311,7 +311,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GoogleLoginUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoogleLoginUI/Info.plist;
 				"INFOPLIST_FILE[sdk=*]" = GoogleLoginUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -344,7 +344,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GoogleLoginUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoogleLoginUI/Info.plist;
 				"INFOPLIST_FILE[sdk=*]" = GoogleLoginUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
