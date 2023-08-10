@@ -38,22 +38,17 @@ extension DailyScrum {
 }
 
 extension DailyScrum {
-    static let sampleDatas: [Self] = [
-        DailyScrum(title: "Design",
-                   attendees: ["Cathy", "Daisy", "Simon", "Jonathan"],
-                   lengthInMinutes: 10,
-                   theme: .yellow),
-        DailyScrum(title: "App Dev",
-                   attendees: ["Katie", "Gray", "Euna", "Luis", "Darla"],
-                   lengthInMinutes: 5,
-                   theme: .orange),
-        DailyScrum(title: "Web Dev",
-                   attendees: ["Chella", "Chris", "Christina", "Eden", "Karla", "Lindsey", "Aga", "Chad", "Jenn", "Sarah"],
-                   lengthInMinutes: 5,
-                   theme: .poppy)
-    ]
-    
     static var emptyData: Self {
         DailyScrum(title: "", attendees: [], lengthInMinutes: 5, theme: .teal)
+    }
+}
+
+extension Array<DailyScrum.Attendee> {
+    var speakers: [ScrumTimer.Speaker] {
+        if isEmpty {
+            return [ScrumTimer.Speaker(name: "None", isComplete: false)]
+        } else {
+            return map { ScrumTimer.Speaker(name: $0.name, isComplete: false) }
+        }
     }
 }

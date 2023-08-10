@@ -16,7 +16,7 @@ struct DetailEditView: View {
             Section("Meeting Info") {
                 TextField("Title", text: $scrum.title)
                 HStack {
-                    Slider(value: $scrum.lengthInMinutesAsDouble) {
+                    Slider(value: $scrum.lengthInMinutesAsDouble, in: 1...59, step: 1) {
                         Text("Length")
                     }
                     .accessibilityValue("\(scrum.lengthInMinutes) minutes")

@@ -17,7 +17,6 @@ struct ScrumsView: View {
                     DetailView(scrum: $scrum)
                 } label: {
                     CardView(scrum: scrum)
-                        
                 }
                 .listRowBackground(scrum.theme.mainColor)
             }
@@ -35,8 +34,23 @@ struct ScrumsView: View {
 }
 
 struct ScrumsView_Previews: PreviewProvider {
-    static var scrums = DailyScrum.sampleDatas
     static var previews: some View {
-        ScrumsView(scrums: .constant(scrums))
+        StatefulPreviewContainer([DailyScrum.emptyData]) { binding in
+            ScrumsView(scrums: binding)
+        }
+    }
+}
+
+struct StatefulPreviewContainer<Value, Content: View>: View {
+    @State var value: Value
+    var content: (Binding<Value>) -> Content
+    
+    var body: some View {
+        content($value)
+    }
+    
+    init(_ value: Value, content: @escaping (Binding<Value>) -> Content) {
+        self._value = State(wrappedValue: value)
+        self.content = content
     }
 }

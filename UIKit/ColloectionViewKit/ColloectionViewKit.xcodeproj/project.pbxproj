@@ -14,6 +14,7 @@
 		8EB419F02A70B02D0097EB56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB419EE2A70B02D0097EB56 /* LaunchScreen.storyboard */; };
 		8EB419F82A70B1700097EB56 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB419F72A70B1700097EB56 /* Preview.swift */; };
 		8EB419FA2A70DA360097EB56 /* CVCellSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB419F92A70DA360097EB56 /* CVCellSize.swift */; };
+		8ED107FC2A7E839500CD91AF /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED107FB2A7E839500CD91AF /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8EB419F12A70B02D0097EB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EB419F72A70B1700097EB56 /* Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		8EB419F92A70DA360097EB56 /* CVCellSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCellSize.swift; sourceTree = "<group>"; };
+		8ED107FB2A7E839500CD91AF /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				8EB419E32A70B02C0097EB56 /* AppDelegate.swift */,
 				8EB419E52A70B02C0097EB56 /* SceneDelegate.swift */,
 				8EB419E72A70B02C0097EB56 /* ViewController.swift */,
+				8ED107FB2A7E839500CD91AF /* ViewController2.swift */,
 				8EB419F92A70DA360097EB56 /* CVCellSize.swift */,
 				8EB419EC2A70B02D0097EB56 /* Assets.xcassets */,
 				8EB419EE2A70B02D0097EB56 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				8EB419E42A70B02C0097EB56 /* AppDelegate.swift in Sources */,
 				8EB419F82A70B1700097EB56 /* Preview.swift in Sources */,
 				8EB419E62A70B02C0097EB56 /* SceneDelegate.swift in Sources */,
+				8ED107FC2A7E839500CD91AF /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

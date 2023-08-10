@@ -9,10 +9,9 @@ import UIKit
 import SwiftUI
 
 class ViewController: UIViewController {
-//    let cvCellSize = CVCellSize(rows: 2, columns: 3, spacing: 20, rowSpacing: 40, insetTop: 15, insetLeft: 15, insetBottom: 15, insetRight: 15)
     let cvCellSize = CVCellSize(rows: 3, columns: 5, spacing: 20, insetTop: 10, insetLeft: 10, insetBottom: 10, insetRight: 10, height: 20)
+    
     lazy var collectionView: UICollectionView = {
-        
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = cvCellSize.lineSpacing ?? cvCellSize.spacing

@@ -49,8 +49,8 @@ struct DetailView: View {
         .navigationTitle(scrum.title)
         .toolbar {
             Button("Edit") {
-                isPresentingEditView = true
                 emptyScrum = scrum
+                isPresentingEditView = true
             }
         }
         .sheet(isPresented: $isPresentingEditView) {
@@ -65,8 +65,10 @@ struct DetailView: View {
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
-                                isPresentingEditView = false
                                 scrum = emptyScrum
+                                print("emptyScrum\n\(emptyScrum)")
+                                print("scrum\n\(scrum)")
+                                isPresentingEditView = false
                             }
                         }
                     }
@@ -76,11 +78,10 @@ struct DetailView: View {
 }
 
 struct DetailView_Previews: PreviewProvider {
-    static var scrum = DailyScrum.sampleDatas[0]
+    @State static var scrum = DailyScrum.emptyData
     static var previews: some View {
         NavigationStack {
-            DetailView(scrum: .constant(scrum))
-                
+            DetailView(scrum: $scrum)
         }
     }
 }

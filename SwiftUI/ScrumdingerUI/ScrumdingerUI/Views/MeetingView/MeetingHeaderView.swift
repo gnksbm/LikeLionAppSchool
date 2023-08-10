@@ -19,6 +19,9 @@ struct MeetingHeaderView: View {
         guard totalSeconds > 0 else { return 1 }
         return Double(secondElapsed) / Double(totalSeconds)
     }
+    private var minuteElapsed: Int {
+        secondElapsed / 60
+    }
     private var minuteRemaining: Int {
         secondRemaining / 60
     }
@@ -26,40 +29,35 @@ struct MeetingHeaderView: View {
     var body: some View {
         VStack {
             ProgressView(value: progress)
-//                .progressViewStyle(ScrumPro)
+                .progressViewStyle(ScrumProgressViewStyle(theme: theme))
             HStack {
                 VStack(alignment: .leading) {
                     Text("Second Elapsed")
                         .font(.caption)
-                    Label("\(secondElapsed)", systemImage: "hourglass.tophalf.fill")
+                    Label("\(minuteElapsed):\(secondElapsed % 60)", systemImage: "hourglass.tophalf.fill")
                 }
                 Spacer()
                 VStack(alignment: .trailing)  {
                     Text("Second Remaining")
                         .font(.caption)
-                    Label("\(secondRemaining)" , systemImage: "hourglass.bottomhalf.fill")
+                    Label("\(minuteRemaining):\(secondRemaining % 60)" , systemImage: "hourglass.bottomhalf.fill")
+                        .labelStyle(.trailingIcon)
                 }
             }
         }
-        .onAppear {
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { Timer in
-                if totalSeconds > 0 {
-                    self.secondElapsed += 50
-                    print(secondElapsed)
-                } else {
-                    Timer.invalidate()
-                }
-            })
-        }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Time remaining")
-        .accessibilityValue("10 minutes")
+        .accessibilityValue("\(minuteRemaining) minutes")
+        .padding([.top, .horizontal])
     }
 }
 
 struct MeetingHeaderView_Preview: PreviewProvider {
+    @State static var secondElapsed = 1500
+    @State static var secondRemaining = 0
+    
     static var previews: some View {
-        MeetingHeaderView(secondElapsed: .constant(5), secondRemaining: .constant(10), theme: Theme.bubblegum)
+        MeetingHeaderView(secondElapsed: $secondElapsed, secondRemaining: $secondRemaining, theme: Theme.bubblegum)
             .previewLayout(.sizeThatFits)
     }
 }
