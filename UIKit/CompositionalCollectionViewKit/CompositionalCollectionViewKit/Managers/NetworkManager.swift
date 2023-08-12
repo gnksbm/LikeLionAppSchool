@@ -12,9 +12,7 @@ class NetworkManager {
         case urlError, urlSessionError, jsonError
     }
     
-    static let shared = NetworkManager()
-    
-    
+    static let shared = NetworkManager()
     
     func request(urlString: String) async -> Result<DaeguFood, MyError> {
         let urlString: String = "https://www.daegufood.go.kr/kor/api/tasty.html?mode=json&addr=%EC%A4%91%EA%B5%AC"

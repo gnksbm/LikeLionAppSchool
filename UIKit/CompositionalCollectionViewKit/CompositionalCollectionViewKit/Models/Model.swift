@@ -16,7 +16,7 @@ struct RestaurantData: Identifiable {
     }
 }
 
-class MyCollectionViewModel {
+class RestaurantModel {
     let networkManager = NetworkManager.shared
     
     var datas: [RestaurantData] = []
@@ -27,12 +27,12 @@ class MyCollectionViewModel {
             switch daeguFood {
             case .success(let daegu):
                 DispatchQueue.main.async {
-                    self.datas = daegu.data.map { RestaurantData(name: $0.bzNm) }
+                    self.datas = daegu.restaurants.map { RestaurantData(name: $0.bzNm) }
                     completion()
                 }
                 print(datas)
             case .failure(let error):
-                print("\(error)")
+                print("\(error)".uppercased())
             }
         }
     }

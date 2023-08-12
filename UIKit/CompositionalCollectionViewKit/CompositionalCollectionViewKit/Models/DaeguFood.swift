@@ -9,7 +9,12 @@ import Foundation
 
 struct DaeguFood: Codable {
     let status, total: String
-    let data: [Restaurant]
+    let restaurants: [Restaurant]
+    
+    enum CodingKeys: String, CodingKey {
+        case status, total
+        case restaurants = "data"
+    }
 }
 
 // MARK: - Datum
@@ -68,4 +73,3 @@ enum FdCS: String, Codable {
     case 특별한술집 = "특별한 술집"
     case 한식 = "한식"
 }
-

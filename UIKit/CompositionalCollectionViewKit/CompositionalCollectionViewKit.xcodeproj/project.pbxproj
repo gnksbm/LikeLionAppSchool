@@ -17,6 +17,7 @@
 		8E43E4362A81D97E0091FC25 /* DaeguFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4352A81D97E0091FC25 /* DaeguFood.swift */; };
 		8E43E4382A81DA3E0091FC25 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4372A81DA3E0091FC25 /* NetworkManager.swift */; };
 		8E43E43A2A81E15D0091FC25 /* RestaurantCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4392A81E15D0091FC25 /* RestaurantCVCell.swift */; };
+		8EAC97AC2A86004B0057DFEF /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC97AB2A86004B0057DFEF /* Extension+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8E43E4352A81D97E0091FC25 /* DaeguFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaeguFood.swift; sourceTree = "<group>"; };
 		8E43E4372A81DA3E0091FC25 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8E43E4392A81E15D0091FC25 /* RestaurantCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCVCell.swift; sourceTree = "<group>"; };
+		8EAC97AB2A86004B0057DFEF /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,9 @@
 		8E43E41E2A81D4E20091FC25 /* CompositionalCollectionViewKit */ = {
 			isa = PBXGroup;
 			children = (
-				8E43E4332A81D5EC0091FC25 /* Preview.swift */,
 				8E43E41F2A81D4E20091FC25 /* AppDelegate.swift */,
 				8E43E4212A81D4E20091FC25 /* SceneDelegate.swift */,
+				8EAC97AD2A8600500057DFEF /* Helpers */,
 				8E43E43B2A81E1BD0091FC25 /* ViewControllers */,
 				8E43E43E2A81E1D70091FC25 /* Views */,
 				8E43E43D2A81E1D00091FC25 /* Managers */,
@@ -109,6 +111,15 @@
 				8E43E4392A81E15D0091FC25 /* RestaurantCVCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8EAC97AD2A8600500057DFEF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8E43E4332A81D5EC0091FC25 /* Preview.swift */,
+				8EAC97AB2A86004B0057DFEF /* Extension+UIView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				8E43E4342A81D5EC0091FC25 /* Preview.swift in Sources */,
 				8E43E43A2A81E15D0091FC25 /* RestaurantCVCell.swift in Sources */,
 				8E36EBA22A846F4F00CB6C48 /* Model.swift in Sources */,
+				8EAC97AC2A86004B0057DFEF /* Extension+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

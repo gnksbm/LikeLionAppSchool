@@ -8,13 +8,15 @@
 import UIKit
 
 class RestaurantCVCell: UICollectionViewCell {
+    static let identifier = "RestaurantCVCell"
+    
     var data: RestaurantData? {
         didSet {
-            customLabel.text = data?.name
+            titleLabel.text = data?.name
         }
     }
     
-    let customLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         return label
@@ -31,18 +33,10 @@ class RestaurantCVCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     func drawTitleLabel() {
-        customLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(customLabel)
-        
-        NSLayoutConstraint.activate([
-            customLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            customLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            customLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            customLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-        ])
-    }
-
-    
-    
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(titleLabel)
+        titleLabel.fitSuperView()
+    } 
 }
