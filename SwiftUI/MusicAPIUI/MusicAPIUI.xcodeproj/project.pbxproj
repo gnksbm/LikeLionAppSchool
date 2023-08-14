@@ -7,38 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E36EBA22A846F4F00CB6C48 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36EBA12A846F4F00CB6C48 /* Model.swift */; };
-		8E43E4202A81D4E20091FC25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E41F2A81D4E20091FC25 /* AppDelegate.swift */; };
-		8E43E4222A81D4E20091FC25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4212A81D4E20091FC25 /* SceneDelegate.swift */; };
-		8E43E4242A81D4E20091FC25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4232A81D4E20091FC25 /* ViewController.swift */; };
-		8E43E4292A81D4E30091FC25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E43E4282A81D4E30091FC25 /* Assets.xcassets */; };
-		8E43E42C2A81D4E30091FC25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E43E42A2A81D4E30091FC25 /* LaunchScreen.storyboard */; };
-		8E43E4342A81D5EC0091FC25 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4332A81D5EC0091FC25 /* Preview.swift */; };
-		8E43E4362A81D97E0091FC25 /* DaeguFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4352A81D97E0091FC25 /* DaeguFood.swift */; };
-		8E43E4382A81DA3E0091FC25 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4372A81DA3E0091FC25 /* NetworkManager.swift */; };
-		8E43E43A2A81E15D0091FC25 /* RestaurantCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43E4392A81E15D0091FC25 /* RestaurantCVCell.swift */; };
-		8EAC97AC2A86004B0057DFEF /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC97AB2A86004B0057DFEF /* Extension+UIView.swift */; };
-		BE8B11532A8A224B00F8DC96 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8B11522A8A224B00F8DC96 /* Info.plist */; };
+		BEA4A4552A8A230600F34919 /* MusicAPIUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A4542A8A230600F34919 /* MusicAPIUIApp.swift */; };
+		BEA4A4572A8A230600F34919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A4562A8A230600F34919 /* ContentView.swift */; };
+		BEA4A4592A8A230700F34919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA4A4582A8A230700F34919 /* Assets.xcassets */; };
+		BEA4A45C2A8A230700F34919 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA4A45B2A8A230700F34919 /* Preview Assets.xcassets */; };
+		BEA4A4632A8A239D00F34919 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A4622A8A239D00F34919 /* NetworkManager.swift */; };
+		BEA4A4652A8A2A1E00F34919 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A4642A8A2A1E00F34919 /* Music.swift */; };
+		BEA4A4692A8A320800F34919 /* MusicListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A4682A8A320800F34919 /* MusicListVC.swift */; };
+		BEA4A46B2A8A328A00F34919 /* MusicListViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A46A2A8A328A00F34919 /* MusicListViewSwiftUI.swift */; };
+		BEA4A46D2A8A354800F34919 /* MusicStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A46C2A8A354800F34919 /* MusicStore.swift */; };
+		BEA4A4782A8A3D1200F34919 /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A4772A8A3D1200F34919 /* MusicData.swift */; };
+		BEA4A47A2A8A40C400F34919 /* MusicCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4A4792A8A40C300F34919 /* MusicCVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E36EBA12A846F4F00CB6C48 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		8E43E41C2A81D4E20091FC25 /* CompositionalCollectionViewKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalCollectionViewKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E43E41F2A81D4E20091FC25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E43E4212A81D4E20091FC25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E43E4232A81D4E20091FC25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E43E4282A81D4E30091FC25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E43E42B2A81D4E30091FC25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8E43E4332A81D5EC0091FC25 /* Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
-		8E43E4352A81D97E0091FC25 /* DaeguFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaeguFood.swift; sourceTree = "<group>"; };
-		8E43E4372A81DA3E0091FC25 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		8E43E4392A81E15D0091FC25 /* RestaurantCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCVCell.swift; sourceTree = "<group>"; };
-		8EAC97AB2A86004B0057DFEF /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
-		BE8B11522A8A224B00F8DC96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA4A4512A8A230600F34919 /* MusicAPIUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicAPIUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA4A4542A8A230600F34919 /* MusicAPIUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAPIUIApp.swift; sourceTree = "<group>"; };
+		BEA4A4562A8A230600F34919 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BEA4A4582A8A230700F34919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEA4A45B2A8A230700F34919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BEA4A4622A8A239D00F34919 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BEA4A4642A8A2A1E00F34919 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		BEA4A4682A8A320800F34919 /* MusicListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListVC.swift; sourceTree = "<group>"; };
+		BEA4A46A2A8A328A00F34919 /* MusicListViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewSwiftUI.swift; sourceTree = "<group>"; };
+		BEA4A46C2A8A354800F34919 /* MusicStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicStore.swift; sourceTree = "<group>"; };
+		BEA4A4772A8A3D1200F34919 /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
+		BEA4A4792A8A40C300F34919 /* MusicCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8E43E4192A81D4E20091FC25 /* Frameworks */ = {
+		BEA4A44E2A8A230600F34919 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,117 +46,132 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E43E4132A81D4E20091FC25 = {
+		BEA4A4482A8A230600F34919 = {
 			isa = PBXGroup;
 			children = (
-				8E43E41E2A81D4E20091FC25 /* CompositionalCollectionViewKit */,
-				8E43E41D2A81D4E20091FC25 /* Products */,
+				BEA4A4532A8A230600F34919 /* MusicAPIUI */,
+				BEA4A4522A8A230600F34919 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8E43E41D2A81D4E20091FC25 /* Products */ = {
+		BEA4A4522A8A230600F34919 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E43E41C2A81D4E20091FC25 /* CompositionalCollectionViewKit.app */,
+				BEA4A4512A8A230600F34919 /* MusicAPIUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E43E41E2A81D4E20091FC25 /* CompositionalCollectionViewKit */ = {
+		BEA4A4532A8A230600F34919 /* MusicAPIUI */ = {
 			isa = PBXGroup;
 			children = (
-				8E43E41F2A81D4E20091FC25 /* AppDelegate.swift */,
-				8E43E4212A81D4E20091FC25 /* SceneDelegate.swift */,
-				8EAC97AD2A8600500057DFEF /* Helpers */,
-				8E43E43B2A81E1BD0091FC25 /* ViewControllers */,
-				8E43E43E2A81E1D70091FC25 /* Views */,
-				8E43E43D2A81E1D00091FC25 /* Managers */,
-				8E43E43C2A81E1C80091FC25 /* Models */,
-				8E43E4282A81D4E30091FC25 /* Assets.xcassets */,
-				8E43E42A2A81D4E30091FC25 /* LaunchScreen.storyboard */,
-				BE8B11522A8A224B00F8DC96 /* Info.plist */,
+				BEA4A4542A8A230600F34919 /* MusicAPIUIApp.swift */,
+				BEA4A4562A8A230600F34919 /* ContentView.swift */,
+				BEA4A4712A8A3B1D00F34919 /* Model */,
+				BEA4A46F2A8A3AFF00F34919 /* SwiftUI */,
+				BEA4A46E2A8A3AF300F34919 /* UIKit */,
+				BEA4A4702A8A3B1100F34919 /* Manager */,
+				BEA4A4582A8A230700F34919 /* Assets.xcassets */,
+				BEA4A45A2A8A230700F34919 /* Preview Content */,
 			);
-			path = CompositionalCollectionViewKit;
+			path = MusicAPIUI;
 			sourceTree = "<group>";
 		};
-		8E43E43B2A81E1BD0091FC25 /* ViewControllers */ = {
+		BEA4A45A2A8A230700F34919 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				8E43E4232A81D4E20091FC25 /* ViewController.swift */,
+				BEA4A45B2A8A230700F34919 /* Preview Assets.xcassets */,
 			);
-			path = ViewControllers;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8E43E43C2A81E1C80091FC25 /* Models */ = {
+		BEA4A46E2A8A3AF300F34919 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				8E43E4352A81D97E0091FC25 /* DaeguFood.swift */,
-				8E36EBA12A846F4F00CB6C48 /* Model.swift */,
+				BEA4A4682A8A320800F34919 /* MusicListVC.swift */,
+				BEA4A4792A8A40C300F34919 /* MusicCVCell.swift */,
+				BEA4A4772A8A3D1200F34919 /* MusicData.swift */,
 			);
-			path = Models;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
-		8E43E43D2A81E1D00091FC25 /* Managers */ = {
+		BEA4A46F2A8A3AFF00F34919 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				8E43E4372A81DA3E0091FC25 /* NetworkManager.swift */,
+				BEA4A4722A8A3B9200F34919 /* View */,
+				BEA4A4732A8A3B9F00F34919 /* Store */,
 			);
-			path = Managers;
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
-		8E43E43E2A81E1D70091FC25 /* Views */ = {
+		BEA4A4702A8A3B1100F34919 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				8E43E4392A81E15D0091FC25 /* RestaurantCVCell.swift */,
+				BEA4A4622A8A239D00F34919 /* NetworkManager.swift */,
 			);
-			path = Views;
+			path = Manager;
 			sourceTree = "<group>";
 		};
-		8EAC97AD2A8600500057DFEF /* Helpers */ = {
+		BEA4A4712A8A3B1D00F34919 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8E43E4332A81D5EC0091FC25 /* Preview.swift */,
-				8EAC97AB2A86004B0057DFEF /* Extension+UIView.swift */,
+				BEA4A4642A8A2A1E00F34919 /* Music.swift */,
 			);
-			path = Helpers;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEA4A4722A8A3B9200F34919 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEA4A46A2A8A328A00F34919 /* MusicListViewSwiftUI.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BEA4A4732A8A3B9F00F34919 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				BEA4A46C2A8A354800F34919 /* MusicStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E43E41B2A81D4E20091FC25 /* CompositionalCollectionViewKit */ = {
+		BEA4A4502A8A230600F34919 /* MusicAPIUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E43E4302A81D4E30091FC25 /* Build configuration list for PBXNativeTarget "CompositionalCollectionViewKit" */;
+			buildConfigurationList = BEA4A45F2A8A230700F34919 /* Build configuration list for PBXNativeTarget "MusicAPIUI" */;
 			buildPhases = (
-				8E43E4182A81D4E20091FC25 /* Sources */,
-				8E43E4192A81D4E20091FC25 /* Frameworks */,
-				8E43E41A2A81D4E20091FC25 /* Resources */,
+				BEA4A44D2A8A230600F34919 /* Sources */,
+				BEA4A44E2A8A230600F34919 /* Frameworks */,
+				BEA4A44F2A8A230600F34919 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CompositionalCollectionViewKit;
-			productName = CompositionalCollectionViewKit;
-			productReference = 8E43E41C2A81D4E20091FC25 /* CompositionalCollectionViewKit.app */;
+			name = MusicAPIUI;
+			productName = MusicAPIUI;
+			productReference = BEA4A4512A8A230600F34919 /* MusicAPIUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8E43E4142A81D4E20091FC25 /* Project object */ = {
+		BEA4A4492A8A230600F34919 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					8E43E41B2A81D4E20091FC25 = {
+					BEA4A4502A8A230600F34919 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 8E43E4172A81D4E20091FC25 /* Build configuration list for PBXProject "CompositionalCollectionViewKit" */;
+			buildConfigurationList = BEA4A44C2A8A230600F34919 /* Build configuration list for PBXProject "MusicAPIUI" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,61 +179,49 @@
 				en,
 				Base,
 			);
-			mainGroup = 8E43E4132A81D4E20091FC25;
-			productRefGroup = 8E43E41D2A81D4E20091FC25 /* Products */;
+			mainGroup = BEA4A4482A8A230600F34919;
+			productRefGroup = BEA4A4522A8A230600F34919 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E43E41B2A81D4E20091FC25 /* CompositionalCollectionViewKit */,
+				BEA4A4502A8A230600F34919 /* MusicAPIUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8E43E41A2A81D4E20091FC25 /* Resources */ = {
+		BEA4A44F2A8A230600F34919 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E43E42C2A81D4E30091FC25 /* LaunchScreen.storyboard in Resources */,
-				8E43E4292A81D4E30091FC25 /* Assets.xcassets in Resources */,
-				BE8B11532A8A224B00F8DC96 /* Info.plist in Resources */,
+				BEA4A45C2A8A230700F34919 /* Preview Assets.xcassets in Resources */,
+				BEA4A4592A8A230700F34919 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8E43E4182A81D4E20091FC25 /* Sources */ = {
+		BEA4A44D2A8A230600F34919 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E43E4382A81DA3E0091FC25 /* NetworkManager.swift in Sources */,
-				8E43E4362A81D97E0091FC25 /* DaeguFood.swift in Sources */,
-				8E43E4242A81D4E20091FC25 /* ViewController.swift in Sources */,
-				8E43E4202A81D4E20091FC25 /* AppDelegate.swift in Sources */,
-				8E43E4222A81D4E20091FC25 /* SceneDelegate.swift in Sources */,
-				8E43E4342A81D5EC0091FC25 /* Preview.swift in Sources */,
-				8E43E43A2A81E15D0091FC25 /* RestaurantCVCell.swift in Sources */,
-				8E36EBA22A846F4F00CB6C48 /* Model.swift in Sources */,
-				8EAC97AC2A86004B0057DFEF /* Extension+UIView.swift in Sources */,
+				BEA4A46D2A8A354800F34919 /* MusicStore.swift in Sources */,
+				BEA4A47A2A8A40C400F34919 /* MusicCVCell.swift in Sources */,
+				BEA4A4632A8A239D00F34919 /* NetworkManager.swift in Sources */,
+				BEA4A4572A8A230600F34919 /* ContentView.swift in Sources */,
+				BEA4A46B2A8A328A00F34919 /* MusicListViewSwiftUI.swift in Sources */,
+				BEA4A4552A8A230600F34919 /* MusicAPIUIApp.swift in Sources */,
+				BEA4A4782A8A3D1200F34919 /* MusicData.swift in Sources */,
+				BEA4A4652A8A2A1E00F34919 /* Music.swift in Sources */,
+				BEA4A4692A8A320800F34919 /* MusicListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		8E43E42A2A81D4E30091FC25 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E43E42B2A81D4E30091FC25 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		8E43E42E2A81D4E30091FC25 /* Debug */ = {
+		BEA4A45D2A8A230700F34919 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +281,7 @@
 			};
 			name = Debug;
 		};
-		8E43E42F2A81D4E30091FC25 /* Release */ = {
+		BEA4A45E2A8A230700F34919 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -334,18 +335,20 @@
 			};
 			name = Release;
 		};
-		8E43E4312A81D4E30091FC25 /* Debug */ = {
+		BEA4A4602A8A230700F34919 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MusicAPIUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CompositionalCollectionViewKit/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -353,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GeonSeobKim.CompositionalCollectionViewKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.MusicAPIUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -361,18 +364,20 @@
 			};
 			name = Debug;
 		};
-		8E43E4322A81D4E30091FC25 /* Release */ = {
+		BEA4A4612A8A230700F34919 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MusicAPIUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CompositionalCollectionViewKit/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -380,7 +385,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GeonSeobKim.CompositionalCollectionViewKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.MusicAPIUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -391,25 +396,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E43E4172A81D4E20091FC25 /* Build configuration list for PBXProject "CompositionalCollectionViewKit" */ = {
+		BEA4A44C2A8A230600F34919 /* Build configuration list for PBXProject "MusicAPIUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E43E42E2A81D4E30091FC25 /* Debug */,
-				8E43E42F2A81D4E30091FC25 /* Release */,
+				BEA4A45D2A8A230700F34919 /* Debug */,
+				BEA4A45E2A8A230700F34919 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E43E4302A81D4E30091FC25 /* Build configuration list for PBXNativeTarget "CompositionalCollectionViewKit" */ = {
+		BEA4A45F2A8A230700F34919 /* Build configuration list for PBXNativeTarget "MusicAPIUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E43E4312A81D4E30091FC25 /* Debug */,
-				8E43E4322A81D4E30091FC25 /* Release */,
+				BEA4A4602A8A230700F34919 /* Debug */,
+				BEA4A4612A8A230700F34919 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8E43E4142A81D4E20091FC25 /* Project object */;
+	rootObject = BEA4A4492A8A230600F34919 /* Project object */;
 }
