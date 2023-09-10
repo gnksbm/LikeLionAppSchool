@@ -62,7 +62,6 @@ extension MainVC: UISearchResultsUpdating {
         guard let searchTerm = searchController.searchBar.text else { return }
         networkManager.fetchData(searchTerm: searchTerm, completion: { metro in
             DispatchQueue.main.async {
-                print(metro.realtimePositionList.count)
                 vc.metro = metro
             }
         })
