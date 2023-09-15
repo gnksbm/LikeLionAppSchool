@@ -38,10 +38,10 @@ enum Tab: Int, CaseIterable {
     static func makeAllCasesToViewControllers() -> [UINavigationController] {
         var viewControllers: [UINavigationController] = []
         Self.allCases.forEach {
-            let viewController = UINavigationController(rootViewController: $0.info.vc)
-            viewController.tabBarItem = UITabBarItem(title: $0.info.title, image: UIImage(systemName: $0.info.ImgName), tag: $0.rawValue)
-            viewController.tabBarItem.selectedImage = UIImage(systemName: $0.info.selectedImgName)
-            viewControllers.append(viewController)
+            let vc = UINavigationController(rootViewController: $0.info.vc)
+            vc.tabBarItem = UITabBarItem(title: $0.info.title, image: UIImage(systemName: $0.info.ImgName), tag: $0.rawValue)
+            vc.tabBarItem.selectedImage = UIImage(systemName: $0.info.selectedImgName)
+            viewControllers.append(vc)
         }
         return viewControllers
     }

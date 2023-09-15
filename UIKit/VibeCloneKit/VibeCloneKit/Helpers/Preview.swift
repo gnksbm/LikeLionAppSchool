@@ -36,3 +36,10 @@ struct UIKitNaviVCPreview: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
     }
 }
+
+class PreviewController: UITabBarController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.viewControllers = Tab.makeAllCasesToViewControllers()
+    }
+}

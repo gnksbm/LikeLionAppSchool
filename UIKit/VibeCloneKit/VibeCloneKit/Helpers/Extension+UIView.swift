@@ -12,18 +12,18 @@ extension UIView {
         case top, btm, lead, trail
     }
     
-    func fitSuperView() {
+    func fitSafeArea() {
         Anchor.allCases.forEach {
-            fitSuperviewAnchor(anchor: $0)
+            setSuperviewAnchor(anchor: $0)
         }
     }
     
-    func fitSuperviewAnchor(anchor: Anchor) {
+    func setSuperviewAnchor(anchor: Anchor) {
         guard let superview else { return }
         getConstraint(equalTo: superview, anchor: anchor).isActive = true
     }
     
-    func fitSuperviewAnchor(anchor: Anchor, constant: CGFloat) {
+    func setSuperviewAnchor(anchor: Anchor, constant: CGFloat) {
         guard let superview else { return }
         getConstraint(equalTo: superview, anchor: anchor, constant: constant).isActive = true
     }
@@ -35,6 +35,19 @@ extension UIView {
     }
     
     func getConstraint(equalTo superView: UIView, anchor: Anchor) -> NSLayoutConstraint {
+        switch anchor {
+        case .top:
+            return topAnchor.constraint(equalTo: superView.topAnchor)
+        case .btm:
+            return bottomAnchor.constraint(equalTo: superView.bottomAnchor)
+        case .lead:
+            return leadingAnchor.constraint(equalTo: superView.leadingAnchor)
+        case .trail:
+            return trailingAnchor.constraint(equalTo: superView.trailingAnchor)
+        }
+    }
+    
+    func getSafeAreaConstraint(equalTo superView: UIView, anchor: Anchor) -> NSLayoutConstraint {
         let safeArea = superView.safeAreaLayoutGuide
         switch anchor {
         case .top:

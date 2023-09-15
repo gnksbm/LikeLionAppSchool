@@ -24,10 +24,16 @@ struct MusicListViewSwiftUI: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     } placeholder: {
-                        ProgressView()
+//                        ProgressView()
                     }
                     
                 }
+            }
+        }
+        .padding()
+        .task {
+            await musicStore.fetchData {
+//                print("fetch완료")
             }
         }
 //        .searchable(text: $musicStore.searchString, placement: .toolbar)
@@ -39,14 +45,13 @@ struct MusicListViewSwiftUI: View {
 //                }
 //            }
 //        }
-        .padding()
-        .onAppear {
-            Task {
-                await musicStore.fetchData {
-                    print("fetch완료")
-                }
-            }
-        }
+//        .onAppear {
+//            Task {
+//                await musicStore.fetchData {
+//                    print("fetch완료")
+//                }
+//            }
+//        }
     }
 }
 

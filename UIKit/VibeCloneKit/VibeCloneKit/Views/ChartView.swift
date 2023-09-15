@@ -33,7 +33,7 @@ class ChartView: UIView {
     override func updateConstraints() {
         self.addSubview(chartCV)
         chartCV.translatesAutoresizingMaskIntoConstraints = false
-        chartCV.fitSuperView()
+        chartCV.fitSafeArea()
         super.updateConstraints()
     }
 }
