@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
-import UserNotifications
 
 @main
 struct NotificationUIApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }
+
+

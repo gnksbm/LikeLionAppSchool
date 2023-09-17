@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LocalNotiView.swift
 //  NotificationUI
 //
 //  Created by gnksbm on 2023/09/16.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LocalNotiView: View {
     @StateObject private var notiManager = NotificationManager.shared
     
     var body: some View {
         VStack {
             Group {
-                Button("노티!") {
+                Button("누르고 5초 뒤에 로컬 노티!") {
                     notiManager.makeNoti()
                 }
-                Button("권한") {
+                Button("권한요청버튼") {
                     notiManager.requestAllow()
                 }
             }
@@ -35,6 +35,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LocalNotiView()
     }
 }

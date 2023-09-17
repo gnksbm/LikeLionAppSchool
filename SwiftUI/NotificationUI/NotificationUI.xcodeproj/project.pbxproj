@@ -8,19 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		8E6D83352AB5B0B000E98355 /* NotificationUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D83342AB5B0B000E98355 /* NotificationUIApp.swift */; };
-		8E6D83372AB5B0B000E98355 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D83362AB5B0B000E98355 /* ContentView.swift */; };
+		8E6D83372AB5B0B000E98355 /* LocalNotiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D83362AB5B0B000E98355 /* LocalNotiView.swift */; };
 		8E6D83392AB5B0B100E98355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D83382AB5B0B100E98355 /* Assets.xcassets */; };
 		8E6D833C2AB5B0B100E98355 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D833B2AB5B0B100E98355 /* Preview Assets.xcassets */; };
 		8E6D83432AB5B0C000E98355 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D83422AB5B0C000E98355 /* NotificationManager.swift */; };
+		8E6D83452AB6E51700E98355 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D83442AB6E51700E98355 /* MainTabView.swift */; };
+		8E6D83472AB6E59500E98355 /* PushNotiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D83462AB6E59500E98355 /* PushNotiView.swift */; };
+		8E6D83492AB6E60600E98355 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D83482AB6E60600E98355 /* MainTab.swift */; };
+		8E6D834B2AB6E62900E98355 /* TabVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D834A2AB6E62900E98355 /* TabVM.swift */; };
+		8E6D83512AB6E72500E98355 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6D83502AB6E72500E98355 /* FirebaseAnalytics */; };
+		8E6D83532AB6E72500E98355 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6D83522AB6E72500E98355 /* FirebaseMessaging */; };
+		8E6D83572AB6EAEE00E98355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D83562AB6EAEE00E98355 /* AppDelegate.swift */; };
+		8E6D83592AB6EE4D00E98355 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D83582AB6EE4D00E98355 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E6D83312AB5B0B000E98355 /* NotificationUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6D83342AB5B0B000E98355 /* NotificationUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUIApp.swift; sourceTree = "<group>"; };
-		8E6D83362AB5B0B000E98355 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8E6D83362AB5B0B000E98355 /* LocalNotiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotiView.swift; sourceTree = "<group>"; };
 		8E6D83382AB5B0B100E98355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E6D833B2AB5B0B100E98355 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E6D83422AB5B0C000E98355 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		8E6D83442AB6E51700E98355 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		8E6D83462AB6E59500E98355 /* PushNotiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiView.swift; sourceTree = "<group>"; };
+		8E6D83482AB6E60600E98355 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
+		8E6D834A2AB6E62900E98355 /* TabVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVM.swift; sourceTree = "<group>"; };
+		8E6D83542AB6E9EA00E98355 /* NotificationUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationUI.entitlements; sourceTree = "<group>"; };
+		8E6D83552AB6E9F000E98355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E6D83562AB6EAEE00E98355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E6D83582AB6EE4D00E98355 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6D83532AB6E72500E98355 /* FirebaseMessaging in Frameworks */,
+				8E6D83512AB6E72500E98355 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,10 +71,13 @@
 		8E6D83332AB5B0B000E98355 /* NotificationUI */ = {
 			isa = PBXGroup;
 			children = (
-				8E6D83342AB5B0B000E98355 /* NotificationUIApp.swift */,
-				8E6D83362AB5B0B000E98355 /* ContentView.swift */,
-				8E6D83422AB5B0C000E98355 /* NotificationManager.swift */,
-				8E6D83382AB5B0B100E98355 /* Assets.xcassets */,
+				8E6D83542AB6E9EA00E98355 /* NotificationUI.entitlements */,
+				8E6D835A2AB6EF6C00E98355 /* App */,
+				8E6D834C2AB6E64E00E98355 /* MainTab */,
+				8E6D834D2AB6E65700E98355 /* LocalNoti */,
+				8E6D834E2AB6E65D00E98355 /* PushNoti */,
+				8E6D835C2AB6EF9A00E98355 /* Utility */,
+				8E6D835B2AB6EF7F00E98355 /* Resource */,
 				8E6D833A2AB5B0B100E98355 /* Preview Content */,
 			);
 			path = NotificationUI;
@@ -68,6 +89,59 @@
 				8E6D833B2AB5B0B100E98355 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8E6D834C2AB6E64E00E98355 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D83442AB6E51700E98355 /* MainTabView.swift */,
+				8E6D83482AB6E60600E98355 /* MainTab.swift */,
+				8E6D834A2AB6E62900E98355 /* TabVM.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		8E6D834D2AB6E65700E98355 /* LocalNoti */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D83362AB5B0B000E98355 /* LocalNotiView.swift */,
+				8E6D83422AB5B0C000E98355 /* NotificationManager.swift */,
+			);
+			path = LocalNoti;
+			sourceTree = "<group>";
+		};
+		8E6D834E2AB6E65D00E98355 /* PushNoti */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D83462AB6E59500E98355 /* PushNotiView.swift */,
+			);
+			path = PushNoti;
+			sourceTree = "<group>";
+		};
+		8E6D835A2AB6EF6C00E98355 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D83342AB5B0B000E98355 /* NotificationUIApp.swift */,
+				8E6D83562AB6EAEE00E98355 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8E6D835B2AB6EF7F00E98355 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D83382AB5B0B100E98355 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8E6D835C2AB6EF9A00E98355 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D83552AB6E9F000E98355 /* Info.plist */,
+				8E6D83582AB6EE4D00E98355 /* GoogleService-Info.plist */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +160,10 @@
 			dependencies = (
 			);
 			name = NotificationUI;
+			packageProductDependencies = (
+				8E6D83502AB6E72500E98355 /* FirebaseAnalytics */,
+				8E6D83522AB6E72500E98355 /* FirebaseMessaging */,
+			);
 			productName = NotificationUI;
 			productReference = 8E6D83312AB5B0B000E98355 /* NotificationUI.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 8E6D83282AB5B0B000E98355;
+			packageReferences = (
+				8E6D834F2AB6E72500E98355 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 8E6D83322AB5B0B000E98355 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,6 +211,7 @@
 			files = (
 				8E6D833C2AB5B0B100E98355 /* Preview Assets.xcassets in Resources */,
 				8E6D83392AB5B0B100E98355 /* Assets.xcassets in Resources */,
+				8E6D83592AB6EE4D00E98355 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +222,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6D83572AB6EAEE00E98355 /* AppDelegate.swift in Sources */,
 				8E6D83432AB5B0C000E98355 /* NotificationManager.swift in Sources */,
-				8E6D83372AB5B0B000E98355 /* ContentView.swift in Sources */,
+				8E6D83472AB6E59500E98355 /* PushNotiView.swift in Sources */,
+				8E6D83372AB5B0B000E98355 /* LocalNotiView.swift in Sources */,
+				8E6D834B2AB6E62900E98355 /* TabVM.swift in Sources */,
 				8E6D83352AB5B0B000E98355 /* NotificationUIApp.swift in Sources */,
+				8E6D83492AB6E60600E98355 /* MainTab.swift in Sources */,
+				8E6D83452AB6E51700E98355 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NotificationUI/NotificationUI.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -275,6 +363,7 @@
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NotificationUI/NotificationUI.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -306,6 +396,7 @@
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,6 +438,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E6D834F2AB6E72500E98355 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E6D83502AB6E72500E98355 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6D834F2AB6E72500E98355 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8E6D83522AB6E72500E98355 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6D834F2AB6E72500E98355 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E6D83292AB5B0B000E98355 /* Project object */;
 }

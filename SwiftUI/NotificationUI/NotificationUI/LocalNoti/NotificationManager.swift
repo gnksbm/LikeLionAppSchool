@@ -30,13 +30,14 @@ class NotificationManager: ObservableObject {
         content.body = "body"
         content.sound = .default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         notiCenter.getNotificationSettings { setting in
             print(setting)
         }
         notiCenter.add(request) { error in
-            print(#function, error)
+            guard let error else { return }
+            print(#function, error.localizedDescription)
         }
     }
 }
