@@ -19,6 +19,8 @@
 		8E44B4C02AB9F954005A1A69 /* GroupVoteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44B4BF2AB9F954005A1A69 /* GroupVoteCellView.swift */; };
 		8E44B4C62AB9FE15005A1A69 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44B4C52AB9FE15005A1A69 /* InitialView.swift */; };
 		8E44B4C82AB9FF7D005A1A69 /* GroupMemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44B4C72AB9FF7D005A1A69 /* GroupMemberListView.swift */; };
+		8E44B4CA2ABA1864005A1A69 /* MegaphoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44B4C92ABA1864005A1A69 /* MegaphoneView.swift */; };
+		8E44B4CC2ABA1BE9005A1A69 /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44B4CB2ABA1BE9005A1A69 /* PreferenceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		8E44B4BF2AB9F954005A1A69 /* GroupVoteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVoteCellView.swift; sourceTree = "<group>"; };
 		8E44B4C52AB9FE15005A1A69 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		8E44B4C72AB9FF7D005A1A69 /* GroupMemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberListView.swift; sourceTree = "<group>"; };
+		8E44B4C92ABA1864005A1A69 /* MegaphoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaphoneView.swift; sourceTree = "<group>"; };
+		8E44B4CB2ABA1BE9005A1A69 /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				8E44B4BB2AB9F4D6005A1A69 /* MyPageView.swift */,
+				8E44B4CB2ABA1BE9005A1A69 /* PreferenceView.swift */,
+				8E44B4C92ABA1864005A1A69 /* MegaphoneView.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 				8E44B4C82AB9FF7D005A1A69 /* GroupMemberListView.swift in Sources */,
 				8E44B4AA2AB9F3BC005A1A69 /* LoginView.swift in Sources */,
 				8E44B4B82AB9F4C9005A1A69 /* HomeView.swift in Sources */,
+				8E44B4CA2ABA1864005A1A69 /* MegaphoneView.swift in Sources */,
 				8E44B4A82AB9F3BC005A1A69 /* ZenoPrototypeUIApp.swift in Sources */,
+				8E44B4CC2ABA1BE9005A1A69 /* PreferenceView.swift in Sources */,
 				8E44B4BA2AB9F4CF005A1A69 /* VoteView.swift in Sources */,
 				8E44B4B62AB9F426005A1A69 /* MainTabView.swift in Sources */,
 				8E44B4BC2AB9F4D6005A1A69 /* MyPageView.swift in Sources */,

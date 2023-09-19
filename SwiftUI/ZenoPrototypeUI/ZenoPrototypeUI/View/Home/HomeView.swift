@@ -15,7 +15,18 @@ struct HomeView: View {
                     NavigationLink {
                         GroupView()
                     } label: {
-                        Text("\(index)번째 모임")
+                        HStack {
+                            Text("\(index)번째 모임")
+                            Spacer()
+                            if index == 0 {
+                                Image(systemName: "3.circle.fill")
+                                    .foregroundColor(.red)
+                            }
+                            if index == 2 {
+                                Image(systemName: "21.circle.fill")
+                                    .foregroundColor(.red)
+                            }
+                        }
                     }
                 }
             }

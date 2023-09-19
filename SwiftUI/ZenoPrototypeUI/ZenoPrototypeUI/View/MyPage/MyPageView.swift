@@ -33,12 +33,14 @@ enum Icon: Int, CaseIterable {
 }
 
 struct MyPageView: View {
+    @State private var isPresented = false
+    
     var body: some View {
         NavigationStack {
             VStack {
                 HStack {
                     Image(systemName: "person.circle")
-                        .font(.system(size: 150))
+                        .font(.system(size: 100))
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 3)) {
                         ForEach(0..<3) { index in
                             VStack {
@@ -53,7 +55,12 @@ struct MyPageView: View {
                     Text("유민영")
                     Spacer()
                     Button {
-                        
+                        isPresented = true
+                    } label: {
+                        Image(systemName: "megaphone")
+                    }
+                    NavigationLink {
+                        PreferenceView()
                     } label: {
                         Image(systemName: "gearshape")
                     }
@@ -84,10 +91,13 @@ struct MyPageView: View {
                             .stroke(.primary, lineWidth: 1)
                     }
                 }
+                Spacer()
             }
             .padding()
         }
-        
+        .sheet(isPresented: $isPresented) {
+            MegaphoneView()
+        }
     }
 }
 

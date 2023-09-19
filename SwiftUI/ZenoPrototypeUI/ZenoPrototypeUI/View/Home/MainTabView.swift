@@ -15,6 +15,7 @@ enum MainTab: CaseIterable {
         switch self {
         case .home:
             HomeView()
+                .badge(24)
         case .vote:
             VoteView()
         case .myPage:
