@@ -15,7 +15,7 @@ struct NameStore: Reducer {
     
     enum Action {
         case change(name: String)
-        case print
+        case reset
     }
     
     func reduce(into state: inout State, action: Action) -> ComposableArchitecture.Effect<Action> {
@@ -24,7 +24,7 @@ struct NameStore: Reducer {
             guard change != "" else { return .none }
             state.name = change
             return .none
-        case .print:
+        case .reset:
             state.name = "GN"
             return .none
         }

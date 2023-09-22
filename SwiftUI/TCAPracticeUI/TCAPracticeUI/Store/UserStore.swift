@@ -9,7 +9,6 @@ import Foundation
 import ComposableArchitecture
 
 struct UserStore: Reducer {
-//    private let fbManager = FBManager.shared
     struct State: Equatable {
         var user: User
     }
