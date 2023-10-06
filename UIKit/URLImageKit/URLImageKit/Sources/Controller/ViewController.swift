@@ -22,9 +22,15 @@ final class ViewController: UIViewController {
     
     lazy var imageCV: UICollectionView = {
         let layout = makeLayout()
-        let cv = UICollectionView(frame: .infinite, collectionViewLayout: layout)
+        let cv = UICollectionView(
+            frame: .infinite,
+            collectionViewLayout: layout
+        )
         cv.dataSource = dataSource
-        cv.register(ImageCVCell.self, forCellWithReuseIdentifier: ImageCVCell.identifier)
+        cv.register(
+            ImageCVCell.self,
+            forCellWithReuseIdentifier: ImageCVCell.identifier
+        )
         return cv
     }()
     
@@ -65,7 +71,11 @@ extension ViewController {
     private func setDataSource() {
         let registration = makeCellRegistration()
         dataSource = .init(collectionView: imageCV) { collectionView, indexPath, myModel in
-            let cell = collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: myModel)
+            let cell = collectionView.dequeueConfiguredReusableCell(
+                using: registration,
+                for: indexPath,
+                item: myModel
+            )
             return cell
         }
         updateSnapshot()
@@ -73,35 +83,29 @@ extension ViewController {
     
     private func makeCellRegistration() ->
     UICollectionView.CellRegistration<ImageCVCell, MyModel> {
-        let config: UICollectionView.CellRegistration<ImageCVCell, MyModel>
-        config = .init { cell, indexPath, myModel in
+        return .init { cell, indexPath, myModel in
             cell.imageView.image = UIImage(data: myModel.imageData)
         }
-        return config
     }
     
     private func makeLayout() ->
     UICollectionViewCompositionalLayout {
         return .init { _, _ in
-            let item: NSCollectionLayoutItem
-            let group: NSCollectionLayoutGroup
-            let section: NSCollectionLayoutSection
-            let screenWidth = UIScreen.main.bounds.width
-            
-            item = .init(
+            let insetValue = CGFloat.screenWidth / 20
+            let item = NSCollectionLayoutItem(
                 layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
                     heightDimension: .fractionalHeight(1)
                 )
             )
-            group = .horizontal(
+            let group = NSCollectionLayoutGroup.horizontal(
                 layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
                     heightDimension: .fractionalWidth(1)
                 ), subitems: [item])
-            group.contentInsets = .init(top: screenWidth / 20, leading: screenWidth / 20, bottom: screenWidth / 20, trailing: screenWidth / 20)
-            section = .init(group: group)
-            section.contentInsets = .init(top: screenWidth / 20, leading: screenWidth / 20, bottom: screenWidth / 20, trailing: screenWidth / 20)
+            group.contentInsets = .init(top: insetValue, leading: insetValue, bottom: insetValue, trailing: insetValue)
+            let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = .init(top: insetValue, leading: insetValue, bottom: insetValue, trailing: insetValue)
             return section
         }
     }
