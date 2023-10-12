@@ -186,12 +186,7 @@
 		8E0D20782AD082870065B774 /* URLImageUI */ = {
 			isa = PBXGroup;
 			children = (
-				8E0D20902AD085B00065B774 /* Model */,
-				8E0D208E2AD085A90065B774 /* View */,
-				8E0D208F2AD085AD0065B774 /* ViewModel */,
-				8E0D20942AD085CD0065B774 /* App */,
-				8E0D20922AD085C00065B774 /* Manager */,
-				8E0D20912AD085BB0065B774 /* Extension */,
+				8E0D20952AD0880F0065B774 /* Sources */,
 				8E0D20932AD085C50065B774 /* Resources */,
 			);
 			path = URLImageUI;
@@ -260,6 +255,19 @@
 				8E0D20792AD082870065B774 /* URLImageUIApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		8E0D20952AD0880F0065B774 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E0D20902AD085B00065B774 /* Model */,
+				8E0D208E2AD085A90065B774 /* View */,
+				8E0D208F2AD085AD0065B774 /* ViewModel */,
+				8E0D20942AD085CD0065B774 /* App */,
+				8E0D20922AD085C00065B774 /* Manager */,
+				8E0D20912AD085BB0065B774 /* Extension */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

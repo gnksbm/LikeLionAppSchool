@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02E824F8F4A30DDB648878C2 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7FEBC08F0A217052C6D26 /* MyModel.swift */; };
+		15E5455380D92B9F6AEB52D5 /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ABCC174883EAFD4EEC9DBA /* UICollectionReusableView+.swift */; };
+		2DFCCB3F9C56070EF6462830 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16A01CE033936345151E8E2 /* NetworkManager.swift */; };
+		319FFB4E1489D80821F5668F /* TuistAssets+Zeno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51267166908EDAD21C4C5D74 /* TuistAssets+Zeno.swift */; };
+		320E1E8B25FB07EDB862B15C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56EBA25B6DAE781D508C83E /* Assets.xcassets */; };
+		4A2478918E2BF27323A8035B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1E35BB723436B81CD960CB1 /* Info.plist */; };
+		5B9DEF5F72770465EB49BB47 /* TuistBundle+Zeno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F3D5297CCA0B6809FEB668 /* TuistBundle+Zeno.swift */; };
+		5D67AAEA4D23DF52D72BBFE3 /* TuistPlists+Zeno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE054620BEE47201B51DDA /* TuistPlists+Zeno.swift */; };
+		61968DCFBDFE86747F68F761 /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29BF836C22360632B1CB18 /* CGFloat+.swift */; };
+		6C985A451F0326044BD38F10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE5C128C48FAFA2ABD1A4F /* AppDelegate.swift */; };
+		7ECC7EB56AFD739FE3535D3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FC30A503474CDA48D09A65 /* ViewController.swift */; };
+		8CDB7A7743F89710181C4F8F /* ImageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9464FB60A95326741AA92 /* ImageCVCell.swift */; };
+		C6CB6EE3D7659C583C9B4C02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E72782C333B3D626FF481 /* SceneDelegate.swift */; };
+		D858D3DC216F19127E9BCC5E /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6C44044B28E54850666AB /* Preview.swift */; };
+		F3D12E89370A0F047F12E322 /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50130D8E424A849F2F83662 /* Sequence+.swift */; };
+		FD367576CD612A2CB33CF035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED6D7E4C090558F6CACA800 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0EB4F0293A40F0C0388E7487 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00F3D5297CCA0B6809FEB668 /* TuistBundle+Zeno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Zeno.swift"; sourceTree = "<group>"; };
+		23ABCC174883EAFD4EEC9DBA /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
+		3468035272264AF8264BB206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		51267166908EDAD21C4C5D74 /* TuistAssets+Zeno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Zeno.swift"; sourceTree = "<group>"; };
+		6BDE5C128C48FAFA2ABD1A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		735E72782C333B3D626FF481 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8B636A34DD8F69995E5865E7 /* Zeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EDE054620BEE47201B51DDA /* TuistPlists+Zeno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistPlists+Zeno.swift"; sourceTree = "<group>"; };
+		9A29BF836C22360632B1CB18 /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
+		9FD7FEBC08F0A217052C6D26 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		A16A01CE033936345151E8E2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A4FC30A503474CDA48D09A65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A50130D8E424A849F2F83662 /* Sequence+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+.swift"; sourceTree = "<group>"; };
+		B1E35BB723436B81CD960CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C5B6C44044B28E54850666AB /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		D56EBA25B6DAE781D508C83E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5A9464FB60A95326741AA92 /* ImageCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCVCell.swift; sourceTree = "<group>"; };
+		FD65580859BA0B3CE55BAA18 /* Zeno-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Zeno-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82AB7938E50216D4AF9A6859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D8EEA636AA7DD6E4FC7134B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5A9464FB60A95326741AA92 /* ImageCVCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		101239BAF0630C478E05B0AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FD7FEBC08F0A217052C6D26 /* MyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1043A8D8777D1306E1332456 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				C2B8663B6C0AFF00BE22F7D2 /* Derived */,
+				4593921CCB484ED36B1F21ED /* Resources */,
+				4B6920E1666B0ECAEBF1F015 /* Sources */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		17BC7555111701F412FEA916 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4FC30A503474CDA48D09A65 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A5471BB9B29D365D040490B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9A29BF836C22360632B1CB18 /* CGFloat+.swift */,
+				A50130D8E424A849F2F83662 /* Sequence+.swift */,
+				23ABCC174883EAFD4EEC9DBA /* UICollectionReusableView+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4339C14053B5076795436EB9 = {
+			isa = PBXGroup;
+			children = (
+				1043A8D8777D1306E1332456 /* Project */,
+				764DFCABD71B99EDDEECE8F9 /* Frameworks */,
+				96D75AA70A5A20B7B6E0AB4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4389EE9951E085EC7D2A4DF4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6BDE5C128C48FAFA2ABD1A4F /* AppDelegate.swift */,
+				735E72782C333B3D626FF481 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4593921CCB484ED36B1F21ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EED6D7E4C090558F6CACA800 /* LaunchScreen.storyboard */,
+				D56EBA25B6DAE781D508C83E /* Assets.xcassets */,
+				B1E35BB723436B81CD960CB1 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4B6920E1666B0ECAEBF1F015 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4389EE9951E085EC7D2A4DF4 /* App */,
+				17BC7555111701F412FEA916 /* Controller */,
+				2A5471BB9B29D365D040490B /* Extension */,
+				B4EE87F3E534EB9F2259EF51 /* Helper */,
+				E10CCD85E8B8A0EC2F41641A /* Manager */,
+				101239BAF0630C478E05B0AB /* Model */,
+				0D8EEA636AA7DD6E4FC7134B /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		764DFCABD71B99EDDEECE8F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96D75AA70A5A20B7B6E0AB4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B636A34DD8F69995E5865E7 /* Zeno.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99F0A7ED224BDB8BD9C90A4E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				51267166908EDAD21C4C5D74 /* TuistAssets+Zeno.swift */,
+				00F3D5297CCA0B6809FEB668 /* TuistBundle+Zeno.swift */,
+				8EDE054620BEE47201B51DDA /* TuistPlists+Zeno.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B4EE87F3E534EB9F2259EF51 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C5B6C44044B28E54850666AB /* Preview.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C1AC82F96574017ED8A29538 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				FD65580859BA0B3CE55BAA18 /* Zeno-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		C2B8663B6C0AFF00BE22F7D2 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				C1AC82F96574017ED8A29538 /* InfoPlists */,
+				99F0A7ED224BDB8BD9C90A4E /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		E10CCD85E8B8A0EC2F41641A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A16A01CE033936345151E8E2 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC535229D8CF998F1739B115 /* Zeno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DF63E75A6062A7F686FE852 /* Build configuration list for PBXNativeTarget "Zeno" */;
+			buildPhases = (
+				7B3287E4E42D7BD52F817A42 /* SwiftLint */,
+				99CDEE4B63E6CE64CC4D7040 /* Sources */,
+				4381629C9FF2F3C418BA34B0 /* Resources */,
+				0EB4F0293A40F0C0388E7487 /* Embed Frameworks */,
+				82AB7938E50216D4AF9A6859 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zeno;
+			productName = Zeno;
+			productReference = 8B636A34DD8F69995E5865E7 /* Zeno.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBC3592129518B7F9E1FE1D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				ORGANIZATIONNAME = "https://github.com/gnksbm/LikeLionAppSchool";
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = B1B0F8ED234A7BA3C722A823 /* Build configuration list for PBXProject "URLImageKit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 4339C14053B5076795436EB9;
+			productRefGroup = 96D75AA70A5A20B7B6E0AB4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC535229D8CF998F1739B115 /* Zeno */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4381629C9FF2F3C418BA34B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320E1E8B25FB07EDB862B15C /* Assets.xcassets in Resources */,
+				FD367576CD612A2CB33CF035 /* LaunchScreen.storyboard in Resources */,
+				4A2478918E2BF27323A8035B /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B3287E4E42D7BD52F817A42 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/Scripts/SwiftLintRunScript.sh ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99CDEE4B63E6CE64CC4D7040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319FFB4E1489D80821F5668F /* TuistAssets+Zeno.swift in Sources */,
+				5B9DEF5F72770465EB49BB47 /* TuistBundle+Zeno.swift in Sources */,
+				5D67AAEA4D23DF52D72BBFE3 /* TuistPlists+Zeno.swift in Sources */,
+				6C985A451F0326044BD38F10 /* AppDelegate.swift in Sources */,
+				C6CB6EE3D7659C583C9B4C02 /* SceneDelegate.swift in Sources */,
+				7ECC7EB56AFD739FE3535D3B /* ViewController.swift in Sources */,
+				61968DCFBDFE86747F68F761 /* CGFloat+.swift in Sources */,
+				F3D12E89370A0F047F12E322 /* Sequence+.swift in Sources */,
+				15E5455380D92B9F6AEB52D5 /* UICollectionReusableView+.swift in Sources */,
+				D858D3DC216F19127E9BCC5E /* Preview.swift in Sources */,
+				2DFCCB3F9C56070EF6462830 /* NetworkManager.swift in Sources */,
+				02E824F8F4A30DDB648878C2 /* MyModel.swift in Sources */,
+				8CDB7A7743F89710181C4F8F /* ImageCVCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EED6D7E4C090558F6CACA800 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3468035272264AF8264BB206 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D039FE20C09404BFAE860D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/Zeno-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GeonSeobKim.URLImageKit;
+				PRODUCT_NAME = Zeno;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		385CB98AAC1C106D347BDBF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AD14CEE9591360EAA188933 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6EEF6ADF48A2F5C9D8C5C39D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/Zeno-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GeonSeobKim.URLImageKit;
+				PRODUCT_NAME = Zeno;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DF63E75A6062A7F686FE852 /* Build configuration list for PBXNativeTarget "Zeno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D039FE20C09404BFAE860D9 /* Debug */,
+				6EEF6ADF48A2F5C9D8C5C39D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B0F8ED234A7BA3C722A823 /* Build configuration list for PBXProject "URLImageKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD14CEE9591360EAA188933 /* Debug */,
+				385CB98AAC1C106D347BDBF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBC3592129518B7F9E1FE1D0 /* Project object */;
+}
