@@ -19,7 +19,7 @@ final class ImageCVCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureUI() {
+    private func configureUI() {
         [imageView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)

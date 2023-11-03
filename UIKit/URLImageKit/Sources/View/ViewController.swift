@@ -8,29 +8,15 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    private let networkManager = NetworkManager.shared
-    
-    private var myModels: [MyModel] = []
-    
-    private let urlStrings: [String] = [
-        "https://wallpaperaccess.com/download/europe-4k-1369012",
-        "https://wallpaperaccess.com/download/europe-4k-1318341"
-    ]
+    private let viewModel = ViewModel()
     
     private var dataSource: UICollectionViewDiffableDataSource<Int, MyModel>!
     private var snapshot: NSDiffableDataSourceSnapshot<Int, MyModel>!
     
     lazy var imageCV: UICollectionView = {
         let layout = makeLayout()
-        let cv = UICollectionView(
-            frame: .infinite,
-            collectionViewLayout: layout
-        )
+        let cv = UICollectionView(frame: .infinite, collectionViewLayout: layout)
         cv.dataSource = dataSource
-        cv.register(
-            ImageCVCell.self,
-            forCellWithReuseIdentifier: ImageCVCell.identifier
-        )
         return cv
     }()
     
@@ -42,39 +28,20 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         setDataSource()
         setNavigation()
+        viewModel.setOnCompleteAction(setDataSource)
         Task {
-            await fetchImages(urlStrings: urlStrings)
+            await viewModel.getImages()
         }
     }
     
-    func setNavigation() {
-        navigationItem.setRightBarButton(.init(title: "reset", style: .plain, target: self, action: #selector(resetBtnTapped)), animated: true)
-    }
-    
-    @MainActor
-    private func fetchImages(urlStrings: [String]) async {
-        await urlStrings.asyncForEach { [weak self] urlString in
-            await self?.fetchImage(urlString: urlString)
-        }
-    }
-    
-    @MainActor
-    private func fetchImage(urlString: String) async {
-        guard let url = URL(string: urlString) else { return }
-        let result = await networkManager.fetchImage(url: url)
-        switch result {
-        case .success(let success):
-            myModels.append(.init(imageData: success))
-            updateSnapshot()
-        case .failure:
-            break
-        }
+    private func setNavigation() {
+        let resetBtn = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"), style: .plain, target: self, action: #selector(resetBtnTapped))
+        navigationItem.setRightBarButton(resetBtn, animated: true)
     }
     
     @objc private func resetBtnTapped() {
-        myModels = []
         Task {
-            await fetchImages(urlStrings: urlStrings)
+            await viewModel.refreshImages()
         }
     }
 }
@@ -125,7 +92,7 @@ extension ViewController {
     private func updateSnapshot() {
         snapshot = .init()
         snapshot.appendSections([0])
-        snapshot.appendItems(myModels)
+        snapshot.appendItems(viewModel.myModels)
         dataSource.apply(snapshot)
     }
 }
@@ -134,7 +101,7 @@ import SwiftUI
 struct ViewController_Preview: PreviewProvider {
     static var previews: some View {
         UIKitPreview {
-            ViewController()
+            UINavigationController(rootViewController: ViewController())
         }
     }
 }
