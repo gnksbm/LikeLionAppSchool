@@ -21,7 +21,11 @@ struct MyModel: Identifiable, Hashable {
 struct ImageCacheWrapper {
     var url: String
     private let shared = NSCache<NSString, UIImage>()
-
+    
+    init(url: String) {
+        self.url = url
+    }
+    
     var wrappedValue: UIImage? {
         get {
             return shared.object(forKey: url as NSString)

@@ -10,28 +10,41 @@ import UIKit
 final class ViewController: UIViewController {
     private let viewModel = ViewModel()
     
-    private var dataSource: UICollectionViewDiffableDataSource<Int, MyModel>!
-    private var snapshot: NSDiffableDataSourceSnapshot<Int, MyModel>!
+    private var dataSource: UICollectionViewDiffableDataSource<Section, MyModel>!
+    private var snapshot: NSDiffableDataSourceSnapshot<Section, MyModel>!
     
-    lazy var imageCV: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let layout = makeLayout()
-        let cv = UICollectionView(frame: .infinite, collectionViewLayout: layout)
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.dataSource = dataSource
         return cv
     }()
     
-    override func loadView() {
-        view = imageCV
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
         setDataSource()
         setNavigation()
         viewModel.setOnCompleteAction(setDataSource)
         Task {
             await viewModel.getImages()
         }
+    }
+    
+    func configureUI() {
+        [collectionView].forEach {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        let safeArea = view.safeAreaLayoutGuide
+        
+        NSLayoutConstraint.activate([
+            collectionView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            collectionView.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
+            collectionView.widthAnchor.constraint(equalTo: safeArea.widthAnchor),
+            collectionView.heightAnchor.constraint(equalTo: safeArea.heightAnchor),
+        ])
     }
     
     private func setNavigation() {
@@ -45,11 +58,19 @@ final class ViewController: UIViewController {
         }
     }
 }
-
+// MARK: CollectionView
 extension ViewController {
+    // MARK: layout
+    private func makeLayout() ->
+    UICollectionViewCompositionalLayout {
+        return .init { sectionIndex, _ in
+            return Section.allCases[sectionIndex].getCompositionalSection()
+        }
+    }
+    // MARK: DataSource
     private func setDataSource() {
         let registration = makeCellRegistration()
-        dataSource = .init(collectionView: imageCV) { collectionView, indexPath, myModel in
+        dataSource = .init(collectionView: collectionView) { collectionView, indexPath, myModel in
             let cell = collectionView.dequeueConfiguredReusableCell(
                 using: registration,
                 for: indexPath,
@@ -66,33 +87,17 @@ extension ViewController {
             cell.imageView.image = myModel.imageData
         }
     }
-    
-    private func makeLayout() ->
-    UICollectionViewCompositionalLayout {
-        return .init { _, _ in
-            let insetValue = CGFloat.screenWidth / 20
-            let item = NSCollectionLayoutItem(
-                layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1),
-                    heightDimension: .fractionalHeight(1)
-                )
-            )
-            let group = NSCollectionLayoutGroup.horizontal(
-                layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1),
-                    heightDimension: .fractionalWidth(1)
-                ), subitems: [item])
-            group.contentInsets = .init(top: insetValue, leading: insetValue, bottom: insetValue, trailing: insetValue)
-            let section = NSCollectionLayoutSection(group: group)
-            section.contentInsets = .init(top: insetValue, leading: insetValue, bottom: insetValue, trailing: insetValue)
-            return section
-        }
-    }
-    
+    // MARK: Snapshot
     private func updateSnapshot() {
         snapshot = .init()
-        snapshot.appendSections([0])
-        snapshot.appendItems(viewModel.myModels)
+        let sections = Section.allCases
+        snapshot.appendSections(sections)
+        sections.forEach {
+            switch $0 {
+            case .image:
+                snapshot.appendItems(viewModel.myModels, toSection: $0)
+            }
+        }
         dataSource.apply(snapshot)
     }
 }
