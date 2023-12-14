@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Memo {
+struct Memo: Hashable {
     var content: String
     let date: Date
 }
