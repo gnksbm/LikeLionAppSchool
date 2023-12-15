@@ -7,20 +7,36 @@
 //
 
 import UIKit
-import CoreData
 
 final class RootVC: UIViewController {
-    private let rootView = RootView()
+    private let coreDataService = CoreDataService(
+        containerName: "Model",
+        entityName: "MemoEntity"
+    )
     
-    var memoList: [Memo] = [
-        .init(content: "Mock", date: .now),
-        .init(content: "Mock", date: .init(timeInterval: -86400, since: .now))
+    private var memoList: [Memo] = [
+//        .init(content: "Mock", date: .now),
+//        .init(content: "Mock", date: .init(timeInterval: -86400, since: .now))
     ]
+    
+    private let rootView = RootView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rootView.memoTableView.dataSource = self
+        manageComponents()
         configureUI()
+        fetchMemoList()
+        guard let memo = memoList.first else { return }
+        removeMemo(memo: memo)
+    }
+    
+    private func manageComponents() {
+        rootView.memoTableView.dataSource = self
+        rootView.saveBtn.addTarget(
+            self,
+            action: #selector(saveBtnTapped),
+            for: .touchUpInside
+        )
     }
     
     private func configureUI() {
@@ -35,6 +51,26 @@ final class RootVC: UIViewController {
             rootView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
             rootView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
         ])
+    }
+    
+    private func fetchMemoList() {
+        memoList = coreDataService.fetchContext()
+            .compactMap { ($0 as? MemoEntity)?.toModel }.sorted(by: { $0.date > $1.date })
+        rootView.memoTableView.reloadData()
+    }
+    
+    @objc private func saveBtnTapped() {
+        guard let content = rootView.textField.text,
+              !content.isEmpty
+        else { return }
+        coreDataService.saveContext(memo: .init(content: content))
+        rootView.textField.text = nil
+        fetchMemoList()
+    }
+    
+    private func removeMemo(memo: Memo) {
+        coreDataService.remove(memo: memo)
+        fetchMemoList()
     }
 }
 
