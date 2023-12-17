@@ -33,8 +33,13 @@ let target = Target(
     infoPlist: .extendingDefault(with: infoPlist),
     sources: ["\(appName)/Sources/**"],
     resources: ["\(appName)/Resources/**"],
+    dependencies: [
+        .external(name: "RxSwift"),
+        .external(name: "RxCocoa")
+    ],
     coreDataModels: [.init("\(appName)/Resources/Model.xcdatamodeld")]
 )
+
 let project = Project(
     name: appName,
     organizationName: "gnksbm",
