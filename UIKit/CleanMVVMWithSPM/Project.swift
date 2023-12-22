@@ -43,7 +43,7 @@ let project = Project(
     name: name,
     organizationName: "gnksbm",
     packages: [
-        .local(path: "Dependencies")
+        .local(path: "SPM")
     ],
 //    settings: <#T##Settings?#>,
     targets: [
