@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchLocationVC.swift
 //  CleanMVVMWithSPM
 //
 //  Created by gnksbm on 2023/12/22.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-public class ViewController: UIViewController {
+public final class SearchLocationVC: UIViewController {
     let searchTextField = UITextField()
+    let searchBtn = UIButton()
+    let resultTableView = UITableView()
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,7 @@ public class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension SearchLocationVC: UITextFieldDelegate {
     
 }
 

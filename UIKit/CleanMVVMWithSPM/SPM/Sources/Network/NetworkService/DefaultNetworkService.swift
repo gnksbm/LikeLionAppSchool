@@ -11,7 +11,7 @@ import Foundation
 public final class DefaultNetworkService: NetworkService {
     public init() { }
     
-    public func request(endPoint: EndPoint) async throws -> Data {
+    public func fetch(endPoint: EndPoint) async throws -> Data {
         guard let urlRequest = endPoint.toURLRequest() else {
             throw NetworkError.invalidURL
         }

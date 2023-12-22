@@ -26,6 +26,8 @@ let target = Target(
                     ]
                 ]
             ],
+            "NAVER_CLIENT_ID": "$(NAVER_CLIENT_ID)",
+            "NAVER_CLIENT_SECRET": "$(NAVER_CLIENT_SECRET)"
         ]
     ),
     sources: ["\(name)/Sources/**"],
