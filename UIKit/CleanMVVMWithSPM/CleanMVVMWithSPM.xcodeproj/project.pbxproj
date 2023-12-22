@@ -7,105 +7,134 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E76E7F82AD2D1AC004C0885 /* DeeplinkUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E76E7F72AD2D1AC004C0885 /* DeeplinkUIApp.swift */; };
-		8E76E7FA2AD2D1AC004C0885 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E76E7F92AD2D1AC004C0885 /* ContentView.swift */; };
-		8E76E7FC2AD2D1AD004C0885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E76E7FB2AD2D1AD004C0885 /* Assets.xcassets */; };
-		8E76E7FF2AD2D1AD004C0885 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E76E7FE2AD2D1AD004C0885 /* Preview Assets.xcassets */; };
-		BED4A37B2B31CD03004BFED1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BED4A37A2B31CD03004BFED1 /* Info.plist */; };
+		BE07BE362B35617400EF747B /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = BE07BE352B35617400EF747B /* Data */; };
+		BE07BE382B35617400EF747B /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = BE07BE372B35617400EF747B /* Domain */; };
+		BE07BE3A2B35617400EF747B /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = BE07BE392B35617400EF747B /* Presentation */; };
+		BE07BE3C2B35627300EF747B /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = BE07BE3B2B35627300EF747B /* Core */; };
+		BEC212D32B35551500C02FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC212D22B35551500C02FD6 /* AppDelegate.swift */; };
+		BEC212D52B35551500C02FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC212D42B35551500C02FD6 /* SceneDelegate.swift */; };
+		BEC212DC2B35551700C02FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC212DB2B35551700C02FD6 /* Assets.xcassets */; };
+		BEC212DF2B35551700C02FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC212DD2B35551700C02FD6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BEC212F32B35561900C02FD6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8E76E7F42AD2D1AC004C0885 /* DeeplinkUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeeplinkUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E76E7F72AD2D1AC004C0885 /* DeeplinkUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkUIApp.swift; sourceTree = "<group>"; };
-		8E76E7F92AD2D1AC004C0885 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8E76E7FB2AD2D1AD004C0885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E76E7FE2AD2D1AD004C0885 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BED4A37A2B31CD03004BFED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE07BE322B355FB900EF747B /* Dependencies */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Dependencies; sourceTree = "<group>"; };
+		BEC212CF2B35551500C02FD6 /* CleanMVVMWithSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMVVMWithSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC212D22B35551500C02FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEC212D42B35551500C02FD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BEC212DB2B35551700C02FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEC212DE2B35551700C02FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEC212E02B35551700C02FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8E76E7F12AD2D1AC004C0885 /* Frameworks */ = {
+		BEC212CC2B35551500C02FD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE07BE382B35617400EF747B /* Domain in Frameworks */,
+				BE07BE3C2B35627300EF747B /* Core in Frameworks */,
+				BE07BE3A2B35617400EF747B /* Presentation in Frameworks */,
+				BE07BE362B35617400EF747B /* Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E76E7EB2AD2D1AC004C0885 = {
+		BEC212C62B35551500C02FD6 = {
 			isa = PBXGroup;
 			children = (
-				8E76E7F62AD2D1AC004C0885 /* DeeplinkUI */,
-				8E76E7F52AD2D1AC004C0885 /* Products */,
+				BE07BE322B355FB900EF747B /* Dependencies */,
+				BEC212D12B35551500C02FD6 /* CleanMVVMWithSPM */,
+				BEC212D02B35551500C02FD6 /* Products */,
+				BEC213022B35591800C02FD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		8E76E7F52AD2D1AC004C0885 /* Products */ = {
+		BEC212D02B35551500C02FD6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E76E7F42AD2D1AC004C0885 /* DeeplinkUI.app */,
+				BEC212CF2B35551500C02FD6 /* CleanMVVMWithSPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E76E7F62AD2D1AC004C0885 /* DeeplinkUI */ = {
+		BEC212D12B35551500C02FD6 /* CleanMVVMWithSPM */ = {
 			isa = PBXGroup;
 			children = (
-				BED4A37A2B31CD03004BFED1 /* Info.plist */,
-				8E76E7F72AD2D1AC004C0885 /* DeeplinkUIApp.swift */,
-				8E76E7F92AD2D1AC004C0885 /* ContentView.swift */,
-				8E76E7FB2AD2D1AD004C0885 /* Assets.xcassets */,
-				8E76E7FD2AD2D1AD004C0885 /* Preview Content */,
+				BEC212D22B35551500C02FD6 /* AppDelegate.swift */,
+				BEC212D42B35551500C02FD6 /* SceneDelegate.swift */,
+				BEC212DB2B35551700C02FD6 /* Assets.xcassets */,
+				BEC212DD2B35551700C02FD6 /* LaunchScreen.storyboard */,
+				BEC212E02B35551700C02FD6 /* Info.plist */,
 			);
-			path = DeeplinkUI;
+			path = CleanMVVMWithSPM;
 			sourceTree = "<group>";
 		};
-		8E76E7FD2AD2D1AD004C0885 /* Preview Content */ = {
+		BEC213022B35591800C02FD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8E76E7FE2AD2D1AD004C0885 /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E76E7F32AD2D1AC004C0885 /* DeeplinkUI */ = {
+		BEC212CE2B35551500C02FD6 /* CleanMVVMWithSPM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E76E8022AD2D1AD004C0885 /* Build configuration list for PBXNativeTarget "DeeplinkUI" */;
+			buildConfigurationList = BEC212E32B35551700C02FD6 /* Build configuration list for PBXNativeTarget "CleanMVVMWithSPM" */;
 			buildPhases = (
-				8E76E7F02AD2D1AC004C0885 /* Sources */,
-				8E76E7F12AD2D1AC004C0885 /* Frameworks */,
-				8E76E7F22AD2D1AC004C0885 /* Resources */,
+				BEC212CB2B35551500C02FD6 /* Sources */,
+				BEC212CC2B35551500C02FD6 /* Frameworks */,
+				BEC212CD2B35551500C02FD6 /* Resources */,
+				BEC212F32B35561900C02FD6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DeeplinkUI;
-			productName = DeeplinkUI;
-			productReference = 8E76E7F42AD2D1AC004C0885 /* DeeplinkUI.app */;
+			name = CleanMVVMWithSPM;
+			packageProductDependencies = (
+				BE07BE352B35617400EF747B /* Data */,
+				BE07BE372B35617400EF747B /* Domain */,
+				BE07BE392B35617400EF747B /* Presentation */,
+				BE07BE3B2B35627300EF747B /* Core */,
+			);
+			productName = CleanMVVMWithSPM;
+			productReference = BEC212CF2B35551500C02FD6 /* CleanMVVMWithSPM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8E76E7EC2AD2D1AC004C0885 /* Project object */ = {
+		BEC212C72B35551500C02FD6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					8E76E7F32AD2D1AC004C0885 = {
+					BEC212CE2B35551500C02FD6 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 8E76E7EF2AD2D1AC004C0885 /* Build configuration list for PBXProject "DeeplinkUI" */;
+			buildConfigurationList = BEC212CA2B35551500C02FD6 /* Build configuration list for PBXProject "CleanMVVMWithSPM" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,43 +142,53 @@
 				en,
 				Base,
 			);
-			mainGroup = 8E76E7EB2AD2D1AC004C0885;
-			productRefGroup = 8E76E7F52AD2D1AC004C0885 /* Products */;
+			mainGroup = BEC212C62B35551500C02FD6;
+			productRefGroup = BEC212D02B35551500C02FD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E76E7F32AD2D1AC004C0885 /* DeeplinkUI */,
+				BEC212CE2B35551500C02FD6 /* CleanMVVMWithSPM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8E76E7F22AD2D1AC004C0885 /* Resources */ = {
+		BEC212CD2B35551500C02FD6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E76E7FF2AD2D1AD004C0885 /* Preview Assets.xcassets in Resources */,
-				8E76E7FC2AD2D1AD004C0885 /* Assets.xcassets in Resources */,
-				BED4A37B2B31CD03004BFED1 /* Info.plist in Resources */,
+				BEC212DF2B35551700C02FD6 /* LaunchScreen.storyboard in Resources */,
+				BEC212DC2B35551700C02FD6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8E76E7F02AD2D1AC004C0885 /* Sources */ = {
+		BEC212CB2B35551500C02FD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E76E7FA2AD2D1AC004C0885 /* ContentView.swift in Sources */,
-				8E76E7F82AD2D1AC004C0885 /* DeeplinkUIApp.swift in Sources */,
+				BEC212D32B35551500C02FD6 /* AppDelegate.swift in Sources */,
+				BEC212D52B35551500C02FD6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		BEC212DD2B35551700C02FD6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEC212DE2B35551700C02FD6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		8E76E8002AD2D1AD004C0885 /* Debug */ = {
+		BEC212E12B35551700C02FD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -209,7 +248,7 @@
 			};
 			name = Debug;
 		};
-		8E76E8012AD2D1AD004C0885 /* Release */ = {
+		BEC212E22B35551700C02FD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,21 +302,18 @@
 			};
 			name = Release;
 		};
-		8E76E8032AD2D1AD004C0885 /* Debug */ = {
+		BEC212E42B35551700C02FD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DeeplinkUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeeplinkUI/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = CleanMVVMWithSPM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -285,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GeonSeobKim.DeeplinkUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gnksbm.CleanMVVMWithSPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -293,21 +329,18 @@
 			};
 			name = Debug;
 		};
-		8E76E8042AD2D1AD004C0885 /* Release */ = {
+		BEC212E52B35551700C02FD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DeeplinkUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeeplinkUI/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = CleanMVVMWithSPM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,7 +348,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GeonSeobKim.DeeplinkUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gnksbm.CleanMVVMWithSPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -326,25 +359,44 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E76E7EF2AD2D1AC004C0885 /* Build configuration list for PBXProject "DeeplinkUI" */ = {
+		BEC212CA2B35551500C02FD6 /* Build configuration list for PBXProject "CleanMVVMWithSPM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E76E8002AD2D1AD004C0885 /* Debug */,
-				8E76E8012AD2D1AD004C0885 /* Release */,
+				BEC212E12B35551700C02FD6 /* Debug */,
+				BEC212E22B35551700C02FD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E76E8022AD2D1AD004C0885 /* Build configuration list for PBXNativeTarget "DeeplinkUI" */ = {
+		BEC212E32B35551700C02FD6 /* Build configuration list for PBXNativeTarget "CleanMVVMWithSPM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E76E8032AD2D1AD004C0885 /* Debug */,
-				8E76E8042AD2D1AD004C0885 /* Release */,
+				BEC212E42B35551700C02FD6 /* Debug */,
+				BEC212E52B35551700C02FD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE07BE352B35617400EF747B /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		BE07BE372B35617400EF747B /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		BE07BE392B35617400EF747B /* Presentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Presentation;
+		};
+		BE07BE3B2B35627300EF747B /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 8E76E7EC2AD2D1AC004C0885 /* Project object */;
+	rootObject = BEC212C72B35551500C02FD6 /* Project object */;
 }
