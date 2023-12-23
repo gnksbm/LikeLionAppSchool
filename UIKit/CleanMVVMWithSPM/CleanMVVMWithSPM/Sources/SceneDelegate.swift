@@ -6,7 +6,11 @@
 //
 
 import UIKit
+
 import Presentation
+import Domain
+import Data
+import Network
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -19,8 +23,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene)
         else { return }
         window = UIWindow(windowScene: windowScene)
-        
-        window?.rootViewController = SearchLocationVC()
+        let searchLocationVC = SearchLocationVC()
+        searchLocationVC.viewModel = SearchViewModel(
+            useCase: DefaultSearchLocationUseCase(
+                repository: DefaultSearchLocationRepository(
+                    networkService: DefaultNetworkService()
+                )
+            )
+        )
+        window?.rootViewController = searchLocationVC
         window?.makeKeyAndVisible()
     }
 
