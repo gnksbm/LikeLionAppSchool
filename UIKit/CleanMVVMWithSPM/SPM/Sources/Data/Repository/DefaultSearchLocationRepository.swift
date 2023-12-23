@@ -34,6 +34,7 @@ public final class DefaultSearchLocationRepository: SearchLocationRepository {
             )
         )
         return networkService.fetch(endPoint: endPoint)
-            .decode(type: [Restaurant].self, decoder: JSONDecoder())
+            .decode(type: SearchLocationDTO.self, decoder: JSONDecoder())
+            .map { $0.toDomain }
     }
 }
