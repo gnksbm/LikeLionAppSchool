@@ -31,6 +31,29 @@ public final class DefaultNetworkService: NetworkService {
     }
     
     public func fetch(endPoint: EndPoint) -> Observable<Data> {
-        .just(.init())
+        return Observable<Data>.create { observer in
+            guard let urlRequest = endPoint.toURLRequest() else {
+                observer.onError(NetworkError.invalidURL)
+                return Disposables.create()
+            }
+            URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let error {
+                    observer.onError(error)
+                }
+                guard let httpResponse = response as? HTTPURLResponse,
+                      200...299 ~= httpResponse.statusCode
+                else {
+                    observer.onError(NetworkError.invalidStatusCode)
+                    return
+                }
+                guard let data
+                else {
+                    observer.onError(NetworkError.invalidData)
+                    return
+                }
+                observer.onNext(data)
+            }
+            return Disposables.create()
+        }
     }
 }
