@@ -8,6 +8,8 @@
 
 import Foundation
 
+import RxSwift
+
 public final class DefaultNetworkService: NetworkService {
     public init() { }
     
@@ -26,5 +28,9 @@ public final class DefaultNetworkService: NetworkService {
         } catch {
             throw NetworkError.transportError(error)
         }
+    }
+    
+    public func fetch(endPoint: EndPoint) -> Observable<Data> {
+        .just(.init())
     }
 }

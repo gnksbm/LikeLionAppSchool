@@ -8,35 +8,35 @@
 import Foundation
 import Core
 
-struct SearchLocationEndPoint: EndPoint {
-    var baseURL: URL? {
+public struct SearchLocationEndPoint: EndPoint {
+    public var baseURL: URL? {
         URL(string: "https://openapi.naver.com/v1/search/local.json")
     }
     
-    var header: [String: String] {
+    public var header: [String: String] {
         [
             "X-Naver-Client-Id": .naverID,
             "X-Naver-Client-Secret": .naverSecret
         ]
     }
     
-    var path: String {
+    public var path: String {
         ""
     }
     
-    var queryParameter: [String : String]
+    public var queryParameter: [String : String]
     
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         .get
     }
     
-    init(request: Request) {
+    public init(request: Request) {
         self.queryParameter = request.toQuery
     }
 }
 
 extension SearchLocationEndPoint {
-    struct Request {
+    public struct Request {
         let query: String
         let display: Int?
         let start: Int?
@@ -53,6 +53,18 @@ extension SearchLocationEndPoint {
                     query[key] = value
                 }
             return query
+        }
+        
+        public init(
+            query: String,
+            display: Int?,
+            start: Int?,
+            sort: String?
+        ) {
+            self.query = query
+            self.display = display
+            self.start = start
+            self.sort = sort
         }
     }
 }
