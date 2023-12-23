@@ -31,14 +31,9 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(url: "https://github.com/ReactiveX/RxSwift", from: "6.0.0")
     ],
     targets: [
-        .target(
-            name: "Domain",
-            dependencies: [
-                "Network"
-            ]
-        ),
         .target(
             name: "Presentation",
             dependencies: [
@@ -52,6 +47,12 @@ let package = Package(
             ]
         ),
         .target(
+            name: "Domain",
+            dependencies: [
+                "Network"
+            ]
+        ),
+        .target(
             name: "Network",
             dependencies: [
                 "Core"
@@ -59,7 +60,10 @@ let package = Package(
         ),
         .target(
             name: "Core",
-            dependencies: []
+            dependencies: [
+                "RxSwift",
+                .product(name: "RxCocoa", package: "RxSwift"),
+            ]
         )
     ]
 )

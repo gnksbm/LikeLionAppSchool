@@ -38,6 +38,8 @@ let target = Target(
         .package(product: "Presentation"),
         .package(product: "Network"),
         .package(product: "Core"),
+//        .package(product: "RxSwift"),
+//        .package(product: "RxCocoa"),
     ]
 )
 
@@ -45,7 +47,11 @@ let project = Project(
     name: name,
     organizationName: "gnksbm",
     packages: [
-        .local(path: "SPM")
+        .local(path: "SPM"),
+//        .package(
+//            url: "https://github.com/ReactiveX/RxSwift",
+//            .upToNextMajor(from: "6.0.0")
+//        )
     ],
 //    settings: <#T##Settings?#>,
     targets: [
