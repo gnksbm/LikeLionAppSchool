@@ -7,6 +7,7 @@
 
 import UIKit
 
+import Core
 import Presentation
 import Domain
 import Data
@@ -25,11 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let searchLocationVC = SearchLocationVC()
         searchLocationVC.viewModel = SearchViewModel(
-            useCase: DefaultSearchLocationUseCase(
-                repository: DefaultSearchLocationRepository(
-                    networkService: DefaultNetworkService()
-                )
-            )
+            useCase: UseCaseContainer.resolve(type: SearchLocationUseCase.self)
         )
         window?.rootViewController = searchLocationVC
         window?.makeKeyAndVisible()
@@ -50,4 +47,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
 }
-
