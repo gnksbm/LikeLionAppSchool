@@ -15,8 +15,6 @@ final class RootVC: UIViewController {
     )
     
     private var memoList: [Memo] = [
-//        .init(content: "Mock", date: .now),
-//        .init(content: "Mock", date: .init(timeInterval: -86400, since: .now))
     ]
     
     private let rootView = RootView()

@@ -1,5 +1,5 @@
 //
-//  MemoUseCase.swift
+//  MemoRepository.swift
 //  CoreDataKit
 //
 //  Created by gnksbm on 2023/12/18.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-import RxSwift
-
-protocol MemoUseCase {
+protocol MemoRepository {
     func save(memo: Memo)
     func fetch() -> [Memo]
     func delete(memo: Memo)
