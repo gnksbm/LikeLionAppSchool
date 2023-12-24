@@ -10,10 +10,12 @@ import Foundation
 import RxSwift
 
 public protocol SearchLocationUseCase {
+    var successedFetch: PublishSubject<[Restaurant]> { get set }
+    
     func searchLocation(
         query: String,
         display: Int?,
         start: Int?,
         sort: String?
-    ) -> Observable<[Restaurant]>
+    )
 }

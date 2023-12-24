@@ -10,7 +10,7 @@ import Core
 
 public struct SearchLocationEndPoint: EndPoint {
     public var baseURL: URL? {
-        URL(string: "https://openapi.naver.com/v1/search/local.json")
+        URL(string: "https://openapi.naver.com/v1/search")
     }
     
     public var header: [String: String] {
@@ -21,7 +21,7 @@ public struct SearchLocationEndPoint: EndPoint {
     }
     
     public var path: String {
-        ""
+        "local.json"
     }
     
     public var queryParameter: [String : String]

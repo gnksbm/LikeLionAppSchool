@@ -10,7 +10,10 @@ import Foundation
 import RxSwift
 
 public final class DefaultSearchLocationUseCase: SearchLocationUseCase {
-    let repository: SearchLocationRepository
+    private let repository: SearchLocationRepository
+    private let disposeBag = DisposeBag()
+    
+    public var successedFetch = PublishSubject<[Restaurant]>()
     
     public init(repository: SearchLocationRepository) {
         self.repository = repository
@@ -21,12 +24,17 @@ public final class DefaultSearchLocationUseCase: SearchLocationUseCase {
         display: Int?,
         start: Int?,
         sort: String?
-    ) -> Observable<[Restaurant]> {
+    ) {
         repository.fetchLocation(
             query: query,
             display: display,
             start: start,
             sort: sort
         )
+        .withUnretained(self)
+        .subscribe { useCase, result in
+            useCase.successedFetch.onNext(result)
+        }
+        .disposed(by: disposeBag)
     }
 }

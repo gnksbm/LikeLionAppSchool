@@ -12,5 +12,5 @@ import RxSwift
 
 public protocol NetworkService {
     func fetch(endPoint: EndPoint) async throws -> Data
-    func fetch(endPoint: EndPoint) -> Observable<Data>
+    func rxFetch(endPoint: EndPoint) -> Observable<Data>
 }

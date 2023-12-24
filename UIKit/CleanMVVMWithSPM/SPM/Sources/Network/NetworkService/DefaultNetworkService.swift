@@ -30,7 +30,7 @@ public final class DefaultNetworkService: NetworkService {
         }
     }
     
-    public func fetch(endPoint: EndPoint) -> Observable<Data> {
+    public func rxFetch(endPoint: EndPoint) -> Observable<Data> {
         return Observable<Data>.create { observer in
             guard let urlRequest = endPoint.toURLRequest() else {
                 observer.onError(NetworkError.invalidURL)
@@ -52,7 +52,7 @@ public final class DefaultNetworkService: NetworkService {
                     return
                 }
                 observer.onNext(data)
-            }
+            }.resume()
             return Disposables.create()
         }
     }

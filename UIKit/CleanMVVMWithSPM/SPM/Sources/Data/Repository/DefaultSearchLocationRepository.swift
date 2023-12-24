@@ -33,7 +33,7 @@ public final class DefaultSearchLocationRepository: SearchLocationRepository {
                 sort: sort
             )
         )
-        return networkService.fetch(endPoint: endPoint)
+        return networkService.rxFetch(endPoint: endPoint)
             .decode(type: SearchLocationDTO.self, decoder: JSONDecoder())
             .map { $0.toDomain }
     }

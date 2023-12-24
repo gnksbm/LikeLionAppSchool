@@ -8,15 +8,15 @@
 import Foundation
 
 public struct Restaurant: Codable {
-    let title: String
-    let link: String
-    let category: String
-    let description: String
-    let telephone: String
-    let address: String
-    let roadAddress: String
-    let mapx: String
-    let mapy: String
+    public let title: String
+    public let link: String
+    public let category: String
+    public let description: String
+    public let telephone: String
+    public let address: String
+    public let roadAddress: String
+    public let mapx: String
+    public let mapy: String
     
     public init(
         title: String,
