@@ -1,19 +1,19 @@
 import ProjectDescription
 
 let name = "CleanMVVMWithSPM"
-let shortVersion = 1.0
-let version = 1.0
+let shortVersion = "1.0"
+let version = "1.0"
 
 let target = Target(
     name: name,
     platform: .iOS,
     product: .app,
-    bundleId: "com.gnksbm",
-    infoPlist: .dictionary(
+    bundleId: "com.Pepsi-Club.YamYamPick",
+    infoPlist: .extendingDefault(with:
         [
             "CFBundleDisplayName": .string(name),
-            "CFBundleShortVersionString": .real(shortVersion),
-            "CFBundleVersion": .real(version),
+            "CFBundleShortVersionString": .string(shortVersion),
+            "CFBundleVersion": .string(version),
             "UILaunchStoryboardName": "LaunchScreen",
             "UIApplicationSceneManifest": [
                 "UIApplicationSupportsMultipleScenes": false,
@@ -40,7 +40,10 @@ let target = Target(
         .package(product: "Core"),
 //        .package(product: "RxSwift"),
 //        .package(product: "RxCocoa"),
-    ]
+    ],
+    settings: .settings(configurations: [
+        .debug(name: .debug, xcconfig: "\(name)/Resources/Secret.xcconfig")
+    ])
 )
 
 let project = Project(

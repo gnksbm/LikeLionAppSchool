@@ -63,6 +63,7 @@ let package = Package(
             dependencies: [
                 "RxSwift",
                 .product(name: "RxCocoa", package: "RxSwift"),
+                .product(name: "RxRelay", package: "RxSwift"),
             ]
         )
     ]
