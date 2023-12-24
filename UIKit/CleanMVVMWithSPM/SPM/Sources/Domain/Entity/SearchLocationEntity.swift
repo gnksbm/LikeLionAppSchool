@@ -1,5 +1,5 @@
 //
-//  Restaurant.swift
+//  SearchLocationEntity.swift
 //  
 //
 //  Created by gnksbm on 2023/12/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Restaurant: Codable {
+public struct SearchLocationEntity: Codable {
     public let title: String
     public let link: String
     public let category: String

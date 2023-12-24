@@ -16,7 +16,7 @@ struct SearchLocationDTO: Codable {
     let display: Int
     let items: [Item]
     
-    var toDomain: [Restaurant] {
+    var toDomain: [SearchLocationEntity] {
         items.map {
             .init(
                 title: $0.title,

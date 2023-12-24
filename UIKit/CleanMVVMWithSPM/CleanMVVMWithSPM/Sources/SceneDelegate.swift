@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         else { return }
         window = UIWindow(windowScene: windowScene)
         let searchLocationVC = SearchLocationVC()
-        searchLocationVC.viewModel = SearchViewModel(
+        searchLocationVC.viewModel = SearchlocationViewModel(
             useCase: UseCaseContainer.resolve(type: SearchLocationUseCase.self)
         )
         window?.rootViewController = searchLocationVC
@@ -47,3 +47,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
 }
+
+#if DEBUG
+import SwiftUI
+
+struct SceneDelegatePreview: PreviewProvider {
+    
+    static var previews: some View {
+        UIKitPreview {
+            let searchLocationVC = SearchLocationVC()
+            searchLocationVC.viewModel = SearchlocationViewModel(
+                useCase: UseCaseContainer.resolve(type: SearchLocationUseCase.self)
+            )
+            return searchLocationVC
+        }
+    }
+}
+#endif

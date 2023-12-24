@@ -30,8 +30,8 @@ public struct SearchLocationEndPoint: EndPoint {
         .get
     }
     
-    public init(request: Request) {
-        self.queryParameter = request.toQuery
+    public init(queryParameter: [String : String]) {
+        self.queryParameter = queryParameter
     }
 }
 

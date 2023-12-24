@@ -11,9 +11,6 @@ import RxSwift
 
 public protocol SearchLocationRepository {
     func fetchLocation(
-        query: String,
-        display: Int?,
-        start: Int?,
-        sort: String?
-    ) -> Observable<[Restaurant]>
+        request: SearchLocationRequest
+    ) -> Observable<[SearchLocationEntity]>
 }
