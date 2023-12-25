@@ -19,6 +19,7 @@
 		94EB2E5E2508A3D5286121A9 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 06FD81F344AF3526CB1A8BDC /* Data */; };
 		B0C0E2E7B5528E7B370F75FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4399FDC557EB31CBCDDAA /* SceneDelegate.swift */; };
 		B42A0AE73A92A0ED4AF2498A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234FC3E7B2510D3F9618C5BC /* LaunchScreen.storyboard */; };
+		BE07BE4E2B394C0A00EF747B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07BE4D2B394C0A00EF747B /* AppCoordinator.swift */; };
 		BE91746B87A31960A784A900 /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 75C9D26E9A02B611E01FD3B1 /* Presentation */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		934EC69202F48F0BBFD11FBC /* AppDelegate+Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Dependency.swift"; sourceTree = "<group>"; };
 		9F0E7E97F72F99CE06440DA3 /* CleanMVVMWithSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMVVMWithSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62E6A7EB7A0F6E82E77990C /* SPM */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SPM; sourceTree = "<group>"; };
+		BE07BE4D2B394C0A00EF747B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BE4DF5D392A6D6D71F5DD2A1 /* TuistAssets+CleanMVVMWithSPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+CleanMVVMWithSPM.swift"; sourceTree = "<group>"; };
 		C2A64A2E8274DDD91A4B4CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDD4399FDC557EB31CBCDDAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				10BCDE74F3B70881BE63E374 /* AppDelegate.swift */,
 				934EC69202F48F0BBFD11FBC /* AppDelegate+Dependency.swift */,
 				CDD4399FDC557EB31CBCDDAA /* SceneDelegate.swift */,
+				BE07BE4D2B394C0A00EF747B /* AppCoordinator.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE07BE4E2B394C0A00EF747B /* AppCoordinator.swift in Sources */,
 				28FB28840176E4B78C7575CE /* AppDelegate+Dependency.swift in Sources */,
 				46ABE8E3F0EC5AD49FDD16DC /* AppDelegate.swift in Sources */,
 				B0C0E2E7B5528E7B370F75FF /* SceneDelegate.swift in Sources */,

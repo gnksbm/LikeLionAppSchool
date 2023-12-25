@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 
 public final class SearchLocationVC: UIViewController {
-    public var viewModel: SearchlocationViewModel!
+    public var viewModel: SearchlocationViewModel
     private let disposeBag = DisposeBag()
     
     private let labelFont = UIFont.boldSystemFont(ofSize: 20)
@@ -21,8 +21,12 @@ public final class SearchLocationVC: UIViewController {
     private lazy var searchTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "검색어를 입력하세요"
+        textField.leftView = UIView(frame: .init(origin: .zero, size: .init(width: 25, height: 25)))
+        textField.leftViewMode = .always
         textField.rightView = searchBtn
         textField.rightViewMode = .always
+        textField.backgroundColor = .white
+        textField.layer.cornerRadius = 25
         return textField
     }()
     
@@ -63,6 +67,15 @@ public final class SearchLocationVC: UIViewController {
         return tableView
     }()
     
+    public init(viewModel: SearchlocationViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
@@ -75,7 +88,7 @@ public final class SearchLocationVC: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .lightGray
         [searchTextField, displayTitleLabel, pickerView, startTitleLabel, resultTableView].forEach {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -92,13 +105,19 @@ public final class SearchLocationVC: UIViewController {
             ),
             searchTextField.heightAnchor.constraint(equalToConstant: 50),
             
-            displayTitleLabel.topAnchor.constraint(equalTo: searchTextField.bottomAnchor),
+            displayTitleLabel.topAnchor.constraint(
+                equalTo: searchTextField.bottomAnchor,
+                constant: 10
+            ),
             displayTitleLabel.trailingAnchor.constraint(equalTo: view.centerXAnchor),
-            displayTitleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            displayTitleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45),
             
-            startTitleLabel.topAnchor.constraint(equalTo: searchTextField.bottomAnchor),
+            startTitleLabel.topAnchor.constraint(
+                equalTo: searchTextField.bottomAnchor,
+                constant: 10
+            ),
             startTitleLabel.leadingAnchor.constraint(equalTo: view.centerXAnchor),
-            startTitleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            startTitleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45),
             
             pickerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pickerView.topAnchor.constraint(equalTo: displayTitleLabel.bottomAnchor),
@@ -145,6 +164,11 @@ public final class SearchLocationVC: UIViewController {
             )
         ) { tv, item, cell in
             cell.titleLabel.text = item.title
+            print("{")
+            print(Mirror(reflecting: item).children.map {
+                "     \($0.label!) = \($0.value)"
+            }.joined(separator: ",\n"))
+            print("}")
         }
         .disposed(by: disposeBag)
     }
@@ -228,13 +252,13 @@ struct SearchLocationPreview: PreviewProvider {
     
     static var previews: some View {
         UIKitPreview {
-            let searchLocationVC = SearchLocationVC()
-            searchLocationVC.viewModel = SearchlocationViewModel(
-                useCase: PreviewUseCase(
-                    successedFetch: .init()
+            SearchLocationVC(
+                viewModel: SearchlocationViewModel(
+                    useCase: PreviewUseCase(
+                        successedFetch: .init()
+                    )
                 )
             )
-            return searchLocationVC
         }
     }
 }

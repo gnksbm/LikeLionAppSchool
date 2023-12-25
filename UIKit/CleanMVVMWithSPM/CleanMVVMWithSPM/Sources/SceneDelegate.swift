@@ -24,11 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene)
         else { return }
         window = UIWindow(windowScene: windowScene)
-        let searchLocationVC = SearchLocationVC()
-        searchLocationVC.viewModel = SearchlocationViewModel(
-            useCase: UseCaseContainer.resolve(type: SearchLocationUseCase.self)
+        
+        let appCoordinator = AppCoordinator(
+            navigationController: UINavigationController()
         )
-        window?.rootViewController = searchLocationVC
+        appCoordinator.start()
+        window?.rootViewController = appCoordinator.navigationController
         window?.makeKeyAndVisible()
     }
 
@@ -55,11 +56,13 @@ struct SceneDelegatePreview: PreviewProvider {
     
     static var previews: some View {
         UIKitPreview {
-            let searchLocationVC = SearchLocationVC()
-            searchLocationVC.viewModel = SearchlocationViewModel(
-                useCase: UseCaseContainer.resolve(type: SearchLocationUseCase.self)
+            SearchLocationVC(
+                viewModel: SearchlocationViewModel(
+                    useCase: UseCaseContainer.resolve(
+                        type: SearchLocationUseCase.self
+                    )
+                )
             )
-            return searchLocationVC
         }
     }
 }
