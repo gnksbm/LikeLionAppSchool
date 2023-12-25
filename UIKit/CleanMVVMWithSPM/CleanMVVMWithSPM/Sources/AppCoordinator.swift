@@ -21,13 +21,22 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let searchLocationVC = SearchLocationVC(
-            viewModel: SearchlocationViewModel(
-                useCase: UseCaseContainer.resolve(
-                    type: SearchLocationUseCase.self
-                )
-            )
+        startTabBarFlow()
+//        let searchLocationVC = SearchLocationVC(
+//            viewModel: SearchlocationViewModel(
+//                useCase: UseCaseContainer.resolve(
+//                    type: SearchLocationUseCase.self
+//                )
+//            )
+//        )
+//        navigationController.pushViewController(searchLocationVC, animated: false)
+    }
+    
+    private func startTabBarFlow() {
+        let mainTabBarCoordinator = MainTabBarCoordinator(
+            navigationController: navigationController
         )
-        navigationController.pushViewController(searchLocationVC, animated: false)
+        childCoordinators.append(mainTabBarCoordinator)
+        mainTabBarCoordinator.start()
     }
 }

@@ -31,8 +31,14 @@ final class SearchLocationTVCell: UITableViewCell {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            titleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9),
-            titleLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.9),
+            titleLabel.widthAnchor.constraint(
+                equalTo: contentView.widthAnchor,
+                multiplier: 0.9
+            ),
+            titleLabel.heightAnchor.constraint(
+                equalTo: contentView.heightAnchor,
+                multiplier: 0.9
+            ),
         ])
     }
 }
