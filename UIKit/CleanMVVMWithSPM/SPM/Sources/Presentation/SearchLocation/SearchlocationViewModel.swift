@@ -14,37 +14,49 @@ import RxRelay
 
 public final class SearchlocationViewModel: ViewModel {
     private let useCase: SearchLocationUseCase
+    
+    private let coordinator: SearchLocationCoordinator
+    
     private let disposeBag = DisposeBag()
     
     private let request = BehaviorRelay<SearchLocationRequest>(value: .init())
     private let displayValue = BehaviorRelay<String?>(value: nil)
     private let startValue = BehaviorRelay<String?>(value: nil)
     
-    public init(useCase: SearchLocationUseCase) {
+    public init(
+        useCase: SearchLocationUseCase,
+        coordinator: SearchLocationCoordinator
+    ) {
         self.useCase = useCase
+        self.coordinator = coordinator
     }
     
     func transform(input: Input) -> Output {
         let output = Output()
         
         useCase.successedFetch
-            .subscribe(onNext: { result in
-                output.fetchedRestaurant.accept(result)
-            })
+            .subscribe(
+                onNext: { result in
+                    output.fetchedRestaurant.accept(result)
+                }
+            )
             .disposed(by: disposeBag)
         
         input.pickerChanged
             .withUnretained(self)
-            .subscribe { viewModel, pick in
-                switch pick.component {
-                case 0:
-                    viewModel.displayValue.accept(pick.row == 0 ? nil : String(pick.row))
-                case 1:
-                    viewModel.startValue.accept(pick.row == 0 ? nil : String(pick.row))
-                default:
-                    break
+            .subscribe(
+                onNext: { viewModel, pick in
+                    switch pick.component {
+                    case 0:
+                        viewModel.displayValue.accept(pick.row == 0 ? nil : String(pick.row))
+                    case 1:
+                        viewModel.startValue.accept(pick.row == 0 ? nil : String(pick.row))
+                    default:
+                        break
+                    }
                 }
-        }.disposed(by: disposeBag)
+            )
+            .disposed(by: disposeBag)
         
         Observable.combineLatest(
             input.searchTerm,
@@ -52,23 +64,40 @@ public final class SearchlocationViewModel: ViewModel {
             startValue.asObservable()
         )
         .withUnretained(self)
-        .subscribe { viewModel, value in
-            viewModel.request.accept(
-                SearchLocationRequest(
-                    query: value.0,
-                    display: value.1,
-                    start: value.2
+        .subscribe(
+            onNext: { viewModel, value in
+                viewModel.request.accept(
+                    SearchLocationRequest(
+                        query: value.0,
+                        display: value.1,
+                        start: value.2
+                    )
                 )
-            )
-        }.disposed(by: disposeBag)
+            }
+        )
+        .disposed(by: disposeBag)
         
         input.searchBtnTapped
             .withUnretained(self)
-            .subscribe(onNext: { viewModel, _ in
-                viewModel.useCase.searchLocation(
-                    request: viewModel.request.value
-                )
-            }).disposed(by: disposeBag)
+            .subscribe(
+                onNext: { viewModel, _ in
+                    viewModel.useCase.searchLocation(
+                        request: viewModel.request.value
+                    )
+                }
+            )
+            .disposed(by: disposeBag)
+        
+        input.resultTapped
+            .withUnretained(self)
+            .subscribe(
+                onNext: { viewModel, indexPath in
+//                    viewModel.coordinator.pushDetail(
+//                        entity: useCase.successedFetch.values.
+//                    )
+                }
+            )
+            .disposed(by: disposeBag)
         
         return output
     }

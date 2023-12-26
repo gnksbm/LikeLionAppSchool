@@ -41,7 +41,7 @@ public final class MainTabBarCoordinator: Coordinator {
         var coordinator: Coordinator
         switch tab {
         case .search:
-            coordinator = SearchLocationCoordinator(
+            coordinator = DefaultSearchLocationCoordinator(
                 navigationController: navigationController
             )
         }

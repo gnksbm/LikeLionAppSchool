@@ -161,15 +161,16 @@ public final class SearchLocationVC: UIViewController {
             to: resultTableView.rx.items(
                 cellIdentifier: SearchLocationTVCell.identifier,
                 cellType: SearchLocationTVCell.self
-            )
-        ) { tv, item, cell in
-            cell.titleLabel.text = item.title
-            print("{")
-            print(Mirror(reflecting: item).children.map {
-                "     \($0.label!) = \($0.value)"
-            }.joined(separator: ",\n"))
-            print("}")
-        }
+            ),
+            curriedArgument: { tv, item, cell in
+                cell.titleLabel.text = item.title
+                print("{")
+                print(Mirror(reflecting: item).children.map {
+                    "     \($0.label!) = \($0.value)"
+                }.joined(separator: ",\n"))
+                print("}")
+            }
+        )
         .disposed(by: disposeBag)
     }
 }
@@ -256,7 +257,8 @@ struct SearchLocationPreview: PreviewProvider {
                 viewModel: SearchlocationViewModel(
                     useCase: PreviewUseCase(
                         successedFetch: .init()
-                    )
+                    ),
+                    coordinator: DefaultSearchLocationCoordinator(navigationController: .init())
                 )
             )
         }

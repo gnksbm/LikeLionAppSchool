@@ -55,6 +55,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 #if DEBUG
 import SwiftUI
 
+import Presentation
+
 struct SceneDelegatePreview: PreviewProvider {
     
     static var previews: some View {
@@ -63,7 +65,8 @@ struct SceneDelegatePreview: PreviewProvider {
                 viewModel: SearchlocationViewModel(
                     useCase: UseCaseContainer.resolve(
                         type: SearchLocationUseCase.self
-                    )
+                    ),
+                    coordinator: DefaultSearchLocationCoordinator(navigationController: .init())
                 )
             )
         }
