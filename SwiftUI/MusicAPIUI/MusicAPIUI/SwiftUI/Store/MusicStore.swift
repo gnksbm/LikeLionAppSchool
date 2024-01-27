@@ -24,7 +24,7 @@ class MusicStore: ObservableObject {
     let networkManager = NetworkManager.shared
     
     func fetchData(_ completion: @escaping () -> ()) async {
-        let data: Result<Music, NetworkError> = await networkManager.request(urlString: "https://itunes.apple.com/search?term=newjeans")
+        let data: Result<Music, NetworkError> = await networkManager.request(urlString: "https://itunes.apple.com/search?term=billevans")
         switch data {
         case .success(let music):
             DispatchQueue.main.async {

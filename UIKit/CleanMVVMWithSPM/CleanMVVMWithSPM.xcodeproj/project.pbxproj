@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15A156FCF3A37C67089917E9 /* AppDelegate+Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCCE8CD8448A69F49AFD34 /* AppDelegate+Dependency.swift */; };
 		1911659A03C3027EFE76532F /* TuistBundle+CleanMVVMWithSPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375463960C7159CADAC6D992 /* TuistBundle+CleanMVVMWithSPM.swift */; };
-		28FB28840176E4B78C7575CE /* AppDelegate+Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934EC69202F48F0BBFD11FBC /* AppDelegate+Dependency.swift */; };
 		46ABE8E3F0EC5AD49FDD16DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BCDE74F3B70881BE63E374 /* AppDelegate.swift */; };
 		4B035B2B48EF4761F64DA234 /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8625C50B4D2DFF606F759083 /* Secret.xcconfig */; };
 		6095999858D5A54E0CB52844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44FA9B5C6F4F72D6E51B2E0B /* Assets.xcassets */; };
@@ -19,8 +19,8 @@
 		94EB2E5E2508A3D5286121A9 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 06FD81F344AF3526CB1A8BDC /* Data */; };
 		B0C0E2E7B5528E7B370F75FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4399FDC557EB31CBCDDAA /* SceneDelegate.swift */; };
 		B42A0AE73A92A0ED4AF2498A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234FC3E7B2510D3F9618C5BC /* LaunchScreen.storyboard */; };
-		BE07BE4E2B394C0A00EF747B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07BE4D2B394C0A00EF747B /* AppCoordinator.swift */; };
 		BE91746B87A31960A784A900 /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 75C9D26E9A02B611E01FD3B1 /* Presentation */; };
+		F5AC073AF787291C25238F4E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D98C2B3AF5D5DF22136D6 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,13 +38,13 @@
 
 /* Begin PBXFileReference section */
 		10BCDE74F3B70881BE63E374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FCCCE8CD8448A69F49AFD34 /* AppDelegate+Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Dependency.swift"; sourceTree = "<group>"; };
 		375463960C7159CADAC6D992 /* TuistBundle+CleanMVVMWithSPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+CleanMVVMWithSPM.swift"; sourceTree = "<group>"; };
 		44FA9B5C6F4F72D6E51B2E0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E2D98C2B3AF5D5DF22136D6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8625C50B4D2DFF606F759083 /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
-		934EC69202F48F0BBFD11FBC /* AppDelegate+Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Dependency.swift"; sourceTree = "<group>"; };
 		9F0E7E97F72F99CE06440DA3 /* CleanMVVMWithSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMVVMWithSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A62E6A7EB7A0F6E82E77990C /* SPM */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SPM; sourceTree = "<group>"; };
-		BE07BE4D2B394C0A00EF747B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A62E6A7EB7A0F6E82E77990C /* SPM */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPM; path = SPM; sourceTree = "<group>"; };
 		BE4DF5D392A6D6D71F5DD2A1 /* TuistAssets+CleanMVVMWithSPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+CleanMVVMWithSPM.swift"; sourceTree = "<group>"; };
 		C2A64A2E8274DDD91A4B4CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDD4399FDC557EB31CBCDDAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,10 +139,10 @@
 		EB6135DD0E880F67472E58AF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5E2D98C2B3AF5D5DF22136D6 /* AppCoordinator.swift */,
 				10BCDE74F3B70881BE63E374 /* AppDelegate.swift */,
-				934EC69202F48F0BBFD11FBC /* AppDelegate+Dependency.swift */,
+				1FCCCE8CD8448A69F49AFD34 /* AppDelegate+Dependency.swift */,
 				CDD4399FDC557EB31CBCDDAA /* SceneDelegate.swift */,
-				BE07BE4D2B394C0A00EF747B /* AppCoordinator.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -193,6 +193,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = gnksbm;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 3C4C813C81C15EFC6D687A48 /* Build configuration list for PBXProject "CleanMVVMWithSPM" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -230,8 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE07BE4E2B394C0A00EF747B /* AppCoordinator.swift in Sources */,
-				28FB28840176E4B78C7575CE /* AppDelegate+Dependency.swift in Sources */,
+				F5AC073AF787291C25238F4E /* AppCoordinator.swift in Sources */,
+				15A156FCF3A37C67089917E9 /* AppDelegate+Dependency.swift in Sources */,
 				46ABE8E3F0EC5AD49FDD16DC /* AppDelegate.swift in Sources */,
 				B0C0E2E7B5528E7B370F75FF /* SceneDelegate.swift in Sources */,
 				81274F8958D6F349C97E865F /* TuistAssets+CleanMVVMWithSPM.swift in Sources */,

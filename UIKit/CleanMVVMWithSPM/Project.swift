@@ -50,7 +50,7 @@ let project = Project(
     name: name,
     organizationName: "gnksbm",
     packages: [
-        .local(path: "SPM"),
+        .local(path: .relativeToManifest("SPM")),
 //        .package(
 //            url: "https://github.com/ReactiveX/RxSwift",
 //            .upToNextMajor(from: "6.0.0")
