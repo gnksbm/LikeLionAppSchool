@@ -24,8 +24,6 @@ final class ViewModel: NSObject {
         let output = Output(
         )
         
-        setupMapController(mapContainer: input.mapContainer)
-        
         input.viewWillAppearEvent
             .withUnretained(self)
             .subscribe(
@@ -53,6 +51,26 @@ final class ViewModel: NSObject {
             )
             .disposed(by: disposeBag)
         
+        setupMapController(mapContainer: input.mapContainer)
+        
+        UIApplication.rx.willResignActive
+            .withUnretained(self)
+            .subscribe(
+                onNext: { viewModel, _ in
+                    viewModel.mapController?.stopRendering()
+                }
+            )
+            .disposed(by: disposeBag)
+        
+        UIApplication.rx.didBecomeActive
+            .withUnretained(self)
+            .subscribe(
+                onNext: { viewModel, _ in
+                    viewModel.mapController?.startRendering()
+                }
+            )
+            .disposed(by: disposeBag)
+        
         return output
     }
     
@@ -75,7 +93,7 @@ extension ViewModel: MapControllerDelegate {
             latitude: 37.402001
         )
         let mapviewInfo = MapviewInfo(
-            viewName: "mapview",
+            viewName: "mapViewTest",
             appName: "openmap",
             viewInfoName: "map",
             defaultPosition: defaultPosition,
@@ -88,7 +106,9 @@ extension ViewModel: MapControllerDelegate {
             break
         case .failed:
             break
-        default:
+        case .none:
+            break
+        @unknown default:
             break
         }
     }
@@ -102,7 +122,7 @@ extension ViewModel: MapControllerDelegate {
     }
     
     func containerDidResized(_ size: CGSize) {
-        let mapView: KakaoMap? = mapController?.getView("mapview") as? KakaoMap
+        let mapView = mapController?.getView("mapViewTest") as? KakaoMap
         mapView?.viewRect = CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: size)
     }
 }
