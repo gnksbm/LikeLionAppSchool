@@ -22,6 +22,9 @@
 		BED78D322B6E412F00158E6C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BED78D312B6E412F00158E6C /* RxSwift */; };
 		BED78D342B6E412F00158E6C /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = BED78D332B6E412F00158E6C /* RxSwift-Dynamic */; };
 		BED78D362B6E426100158E6C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED78D352B6E426100158E6C /* ViewModel.swift */; };
+		BED78D3F2B6F904B00158E6C /* BusStopListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED78D3E2B6F904B00158E6C /* BusStopListRepository.swift */; };
+		BED78D412B6F907700158E6C /* BusStopInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED78D402B6F907700158E6C /* BusStopInfoResponse.swift */; };
+		BED78D432B6F90AA00158E6C /* BusStopListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED78D422B6F90AA00158E6C /* BusStopListDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,10 @@
 		BED78D1A2B6E336C00158E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED78D232B6E34A300158E6C /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		BED78D352B6E426100158E6C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BED78D3D2B6F900400158E6C /* stationList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stationList.json; sourceTree = "<group>"; };
+		BED78D3E2B6F904B00158E6C /* BusStopListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopListRepository.swift; sourceTree = "<group>"; };
+		BED78D402B6F907700158E6C /* BusStopInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopInfoResponse.swift; sourceTree = "<group>"; };
+		BED78D422B6F90AA00158E6C /* BusStopListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopListDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +86,14 @@
 				BED78D0E2B6E336A00158E6C /* SceneDelegate.swift */,
 				BED78D102B6E336A00158E6C /* ViewController.swift */,
 				BED78D352B6E426100158E6C /* ViewModel.swift */,
+				BED78D3E2B6F904B00158E6C /* BusStopListRepository.swift */,
+				BED78D422B6F90AA00158E6C /* BusStopListDTO.swift */,
+				BED78D402B6F907700158E6C /* BusStopInfoResponse.swift */,
 				BED78D152B6E336C00158E6C /* Assets.xcassets */,
 				BED78D172B6E336C00158E6C /* LaunchScreen.storyboard */,
 				BED78D1A2B6E336C00158E6C /* Info.plist */,
 				BED78D232B6E34A300158E6C /* Secrets.xcconfig */,
+				BED78D3D2B6F900400158E6C /* stationList.json */,
 			);
 			path = KakaoMapKit;
 			sourceTree = "<group>";
@@ -173,8 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED78D112B6E336A00158E6C /* ViewController.swift in Sources */,
+				BED78D412B6F907700158E6C /* BusStopInfoResponse.swift in Sources */,
 				BED78D0D2B6E336A00158E6C /* AppDelegate.swift in Sources */,
 				BED78D362B6E426100158E6C /* ViewModel.swift in Sources */,
+				BED78D432B6F90AA00158E6C /* BusStopListDTO.swift in Sources */,
+				BED78D3F2B6F904B00158E6C /* BusStopListRepository.swift in Sources */,
 				BED78D0F2B6E336A00158E6C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
