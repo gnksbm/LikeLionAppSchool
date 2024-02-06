@@ -8,6 +8,12 @@
 import Foundation
 import CoreData
 
-class CoreDataManager {
-    
+protocol LocalStorage { 
+    func fetch()
+}
+
+class CoreDataManager: LocalStorage {
+    func fetch() {
+        
+    }
 }

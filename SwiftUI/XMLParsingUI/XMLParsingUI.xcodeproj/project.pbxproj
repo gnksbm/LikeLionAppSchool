@@ -11,7 +11,13 @@
 		8E7153172B63A46300B4A556 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7153162B63A46300B4A556 /* ContentView.swift */; };
 		8E7153192B63A46500B4A556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7153182B63A46500B4A556 /* Assets.xcassets */; };
 		8E71531C2B63A46500B4A556 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E71531B2B63A46500B4A556 /* Preview Assets.xcassets */; };
-		8E7153252B63A5EF00B4A556 /* StationArrivalInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7153242B63A5EF00B4A556 /* StationArrivalInfoRepository.swift */; };
+		8E7153252B63A5EF00B4A556 /* FirstPartyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7153242B63A5EF00B4A556 /* FirstPartyRepository.swift */; };
+		8E71534E2B68CAA500B4A556 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 8E71534D2B68CAA500B4A556 /* SwiftyXMLParser */; };
+		8E7153502B68CAC900B4A556 /* ThirdPartyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E71534F2B68CAC900B4A556 /* ThirdPartyRepository.swift */; };
+		8E7153522B68D02C00B4A556 /* FirstPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7153512B68D02C00B4A556 /* FirstPartyView.swift */; };
+		8E7153542B68D03700B4A556 /* ThirdPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7153532B68D03700B4A556 /* ThirdPartyView.swift */; };
+		8E7153572B68D51000B4A556 /* XMLParsingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7153562B68D51000B4A556 /* XMLParsingRepository.swift */; };
+		8E71535B2B68D5EC00B4A556 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E71535A2B68D5EC00B4A556 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +28,12 @@
 		8E71531B2B63A46500B4A556 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E7153222B63A47700B4A556 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		8E7153232B63A4A900B4A556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8E7153242B63A5EF00B4A556 /* StationArrivalInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationArrivalInfoRepository.swift; sourceTree = "<group>"; };
+		8E7153242B63A5EF00B4A556 /* FirstPartyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPartyRepository.swift; sourceTree = "<group>"; };
+		8E71534F2B68CAC900B4A556 /* ThirdPartyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyRepository.swift; sourceTree = "<group>"; };
+		8E7153512B68D02C00B4A556 /* FirstPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPartyView.swift; sourceTree = "<group>"; };
+		8E7153532B68D03700B4A556 /* ThirdPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyView.swift; sourceTree = "<group>"; };
+		8E7153562B68D51000B4A556 /* XMLParsingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParsingRepository.swift; sourceTree = "<group>"; };
+		8E71535A2B68D5EC00B4A556 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E71534E2B68CAA500B4A556 /* SwiftyXMLParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +69,9 @@
 			children = (
 				8E7153232B63A4A900B4A556 /* Info.plist */,
 				8E7153142B63A46300B4A556 /* XMLParsingUIApp.swift */,
-				8E7153162B63A46300B4A556 /* ContentView.swift */,
-				8E7153242B63A5EF00B4A556 /* StationArrivalInfoRepository.swift */,
+				8E7153592B68D5E700B4A556 /* Model */,
+				8E7153582B68D59E00B4A556 /* View */,
+				8E7153552B68D50600B4A556 /* Repository */,
 				8E7153222B63A47700B4A556 /* Secrets.xcconfig */,
 				8E7153182B63A46500B4A556 /* Assets.xcassets */,
 				8E71531A2B63A46500B4A556 /* Preview Content */,
@@ -72,6 +85,34 @@
 				8E71531B2B63A46500B4A556 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8E7153552B68D50600B4A556 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8E7153242B63A5EF00B4A556 /* FirstPartyRepository.swift */,
+				8E71534F2B68CAC900B4A556 /* ThirdPartyRepository.swift */,
+				8E7153562B68D51000B4A556 /* XMLParsingRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8E7153582B68D59E00B4A556 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E7153162B63A46300B4A556 /* ContentView.swift */,
+				8E7153512B68D02C00B4A556 /* FirstPartyView.swift */,
+				8E7153532B68D03700B4A556 /* ThirdPartyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E7153592B68D5E700B4A556 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E71535A2B68D5EC00B4A556 /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +131,9 @@
 			dependencies = (
 			);
 			name = XMLParsingUI;
+			packageProductDependencies = (
+				8E71534D2B68CAA500B4A556 /* SwiftyXMLParser */,
+			);
 			productName = XMLParsingUI;
 			productReference = 8E7153112B63A46300B4A556 /* XMLParsingUI.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 8E7153082B63A46300B4A556;
+			packageReferences = (
+				8E71534C2B68CAA500B4A556 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */,
+			);
 			productRefGroup = 8E7153122B63A46300B4A556 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,9 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7153522B68D02C00B4A556 /* FirstPartyView.swift in Sources */,
 				8E7153172B63A46300B4A556 /* ContentView.swift in Sources */,
 				8E7153152B63A46300B4A556 /* XMLParsingUIApp.swift in Sources */,
-				8E7153252B63A5EF00B4A556 /* StationArrivalInfoRepository.swift in Sources */,
+				8E7153542B68D03700B4A556 /* ThirdPartyView.swift in Sources */,
+				8E71535B2B68D5EC00B4A556 /* Item.swift in Sources */,
+				8E7153572B68D51000B4A556 /* XMLParsingRepository.swift in Sources */,
+				8E7153502B68CAC900B4A556 /* ThirdPartyRepository.swift in Sources */,
+				8E7153252B63A5EF00B4A556 /* FirstPartyRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +408,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E71534C2B68CAA500B4A556 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yahoojapan/SwiftyXMLParser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E71534D2B68CAA500B4A556 /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E71534C2B68CAA500B4A556 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E7153092B63A46300B4A556 /* Project object */;
 }
