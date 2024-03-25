@@ -12,8 +12,11 @@ import KakaoMapsSDK
 
 final class ViewModel: NSObject {
     private var mapController: KMController?
+    private var busStopListRepository = BusStopListRepository()
     
     private let disposeBag = DisposeBag()
+    
+    private let mapName = "mapViewTest"
     
     deinit {
         mapController?.stopRendering()
@@ -22,6 +25,7 @@ final class ViewModel: NSObject {
     
     func transform(input: Input) -> Output {
         let output = Output(
+            busStopInfoResponse: .init(value: [])
         )
         
         input.viewWillAppearEvent
@@ -84,6 +88,41 @@ final class ViewModel: NSObject {
         mapController?.startEngine()
         mapController?.authenticate()
     }
+    
+    func createPois() {
+        let view = mapController?.getView(mapName) as! KakaoMap
+        let manager = view.getLabelManager()
+        manager.addLabelLayer(
+            option: LabelLayerOptions(
+                layerID: "PoiLayer",
+                competitionType: .all,
+                competitionUnit: .poi,
+                orderType: .closerFromLeftBottom,
+                zOrder: 1
+            )
+        )
+        let layer = manager.getLabelLayer(layerID: "PoiLayer")
+        let poiOption = PoiOptions(styleID: "PerLevelStyle")
+        poiOption.rank = 0
+        
+        let poi1 = layer?.addPoi(
+            option: poiOption,
+            at: MapPoint(
+                longitude: 127.108678,
+                latitude: 37.402001
+            )
+        )
+        // Poi 개별 Badge추가. 즉, 아래에서 생성된 Poi는 Style에 빌트인되어있는 badge와, Poi가 개별적으로 가지고 있는 Badge를 갖게 된다.
+        let badge = PoiBadge(
+            badgeID: "noti",
+            image: UIImage(systemName: "bus.fill"),
+            offset: .init(x: 0.5, y: 0.5),
+            zOrder: 1
+        )
+        poi1?.addBadge(badge)
+        poi1?.show()
+        poi1?.showBadge(badgeID: "noti")
+    }
 }
 
 extension ViewModel: MapControllerDelegate {
@@ -93,7 +132,7 @@ extension ViewModel: MapControllerDelegate {
             latitude: 37.402001
         )
         let mapviewInfo = MapviewInfo(
-            viewName: "mapViewTest",
+            viewName: mapName,
             appName: "openmap",
             viewInfoName: "map",
             defaultPosition: defaultPosition,
@@ -111,6 +150,7 @@ extension ViewModel: MapControllerDelegate {
         @unknown default:
             break
         }
+        createPois()
     }
     
     func authenticationSucceeded() {
@@ -122,7 +162,7 @@ extension ViewModel: MapControllerDelegate {
     }
     
     func containerDidResized(_ size: CGSize) {
-        let mapView = mapController?.getView("mapViewTest") as? KakaoMap
+        let mapView = mapController?.getView(mapName) as? KakaoMap
         mapView?.viewRect = CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: size)
     }
 }
@@ -136,6 +176,6 @@ extension ViewModel {
     }
     
     struct Output {
-        
+        let busStopInfoResponse: BehaviorSubject<[BusStopInfoResponse]>
     }
 }

@@ -1,0 +1,8 @@
+
+target 'NaverMapKit' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+    pod 'NMapsMap', '3.16.2'
+    pod 'RxSwift', '6.6.0'
+    pod 'RxCocoa', '6.6.0'
+end

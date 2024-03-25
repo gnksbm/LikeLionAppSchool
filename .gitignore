@@ -98,3 +98,6 @@ iOSInjectionProject/
 
 # PList
 **/*.plist
+
+# Cocoapods
+Pods/
