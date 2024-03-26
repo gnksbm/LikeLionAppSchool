@@ -9,14 +9,10 @@ import Foundation
 
 import RxSwift
 
-public protocol ViewModel {
-    associatedtype Input
-    associatedtype Output
-    func transform(input: Input) -> Output
-}
-
 final class NaverMapViewModel: ViewModel {
     private let useCase: NaverMapUseCase
+    
+    private let disposeBag = DisposeBag()
     
     init(useCase: NaverMapUseCase) {
         self.useCase = useCase
@@ -27,11 +23,24 @@ final class NaverMapViewModel: ViewModel {
             selectedBusStopInfo: .init(),
             nearStopList: .init()
         )
-        return output
-    }
-    
-    private func getNearbyStop() {
         
+        input.informationViewTapEvent
+            .subscribe(
+                onNext: { _ in
+                    guard let url = URL(
+                        string: UIApplication.openNotificationSettingsURLString
+                    )
+                    else { return }
+                    UIApplication.shared.open(url)
+                }
+            )
+            .disposed(by: disposeBag)
+        
+        useCase.getNearbyStop()
+            .bind(to: output.selectedBusStopInfo)
+            .disposed(by: disposeBag)
+        
+        return output
     }
 }
 
@@ -48,4 +57,10 @@ extension NaverMapViewModel {
         let selectedBusStopInfo: PublishSubject<(BusStopInfoResponse, String)>
         let nearStopList: PublishSubject<[BusStopInfoResponse]>
     }
+}
+
+protocol ViewModel {
+    associatedtype Input
+    associatedtype Output
+    func transform(input: Input) -> Output
 }

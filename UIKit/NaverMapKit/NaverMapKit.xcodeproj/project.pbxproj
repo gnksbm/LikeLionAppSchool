@@ -19,6 +19,8 @@
 		BEB38B462BB1A73200C7718E /* BusStopInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB38B452BB1A73200C7718E /* BusStopInfoRepository.swift */; };
 		BEB38B482BB1A77C00C7718E /* BusStopListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB38B472BB1A77C00C7718E /* BusStopListDTO.swift */; };
 		BEB38B4A2BB1AC2300C7718E /* NaverMapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB38B492BB1AC2300C7718E /* NaverMapUseCase.swift */; };
+		BEB38B502BB1C26F00C7718E /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB38B4F2BB1C26F00C7718E /* LocationResponse.swift */; };
+		BEB38B522BB1CAF300C7718E /* total_stationList.json in Resources */ = {isa = PBXBuildFile; fileRef = BEB38B512BB1CAF300C7718E /* total_stationList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BEB38B452BB1A73200C7718E /* BusStopInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopInfoRepository.swift; sourceTree = "<group>"; };
 		BEB38B472BB1A77C00C7718E /* BusStopListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopListDTO.swift; sourceTree = "<group>"; };
 		BEB38B492BB1AC2300C7718E /* NaverMapUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapUseCase.swift; sourceTree = "<group>"; };
+		BEB38B4F2BB1C26F00C7718E /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
+		BEB38B512BB1CAF300C7718E /* total_stationList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = total_stationList.json; sourceTree = "<group>"; };
 		EFA20C689C76906A933482B1 /* Pods_NaverMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaverMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7F05B7C6A2A6658190FE24 /* Pods-NaverMapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverMapKit.release.xcconfig"; path = "Target Support Files/Pods-NaverMapKit/Pods-NaverMapKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +98,7 @@
 				BEB38B312BB19BF000C7718E /* Assets.xcassets */,
 				BEB38B332BB19BF000C7718E /* LaunchScreen.storyboard */,
 				BEB38B362BB19BF000C7718E /* Info.plist */,
+				BEB38B512BB1CAF300C7718E /* total_stationList.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -101,17 +106,50 @@
 		BEB38B3F2BB1A3CE00C7718E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BEB38B282BB19BEF00C7718E /* AppDelegate.swift */,
-				BEB38B2A2BB19BEF00C7718E /* SceneDelegate.swift */,
-				BEB38B402BB1A51100C7718E /* BusStopInfoResponse.swift */,
-				BEB38B2C2BB19BEF00C7718E /* NaverMapViewController.swift */,
-				BEB38B492BB1AC2300C7718E /* NaverMapUseCase.swift */,
-				BEB38B3C2BB1A18D00C7718E /* NaverMapViewModel.swift */,
-				BEB38B432BB1A63100C7718E /* LocationService.swift */,
-				BEB38B452BB1A73200C7718E /* BusStopInfoRepository.swift */,
-				BEB38B472BB1A77C00C7718E /* BusStopListDTO.swift */,
+				BEB38B4B2BB1C21300C7718E /* App */,
+				BEB38B4C2BB1C21900C7718E /* Domain */,
+				BEB38B4D2BB1C22200C7718E /* Data */,
+				BEB38B4E2BB1C22C00C7718E /* Presentation */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		BEB38B4B2BB1C21300C7718E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BEB38B282BB19BEF00C7718E /* AppDelegate.swift */,
+				BEB38B2A2BB19BEF00C7718E /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BEB38B4C2BB1C21900C7718E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BEB38B402BB1A51100C7718E /* BusStopInfoResponse.swift */,
+				BEB38B492BB1AC2300C7718E /* NaverMapUseCase.swift */,
+				BEB38B4F2BB1C26F00C7718E /* LocationResponse.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BEB38B4D2BB1C22200C7718E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BEB38B472BB1A77C00C7718E /* BusStopListDTO.swift */,
+				BEB38B432BB1A63100C7718E /* LocationService.swift */,
+				BEB38B452BB1A73200C7718E /* BusStopInfoRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BEB38B4E2BB1C22C00C7718E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BEB38B2C2BB19BEF00C7718E /* NaverMapViewController.swift */,
+				BEB38B3C2BB1A18D00C7718E /* NaverMapViewModel.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		D0EF0E7D8A7A7F6013C2CA70 /* Frameworks */ = {
@@ -182,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB38B522BB1CAF300C7718E /* total_stationList.json in Resources */,
 				BEB38B352BB19BF000C7718E /* LaunchScreen.storyboard in Resources */,
 				BEB38B322BB19BF000C7718E /* Assets.xcassets in Resources */,
 			);
@@ -237,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEB38B4A2BB1AC2300C7718E /* NaverMapUseCase.swift in Sources */,
+				BEB38B502BB1C26F00C7718E /* LocationResponse.swift in Sources */,
 				BEB38B3D2BB1A18D00C7718E /* NaverMapViewModel.swift in Sources */,
 				BEB38B412BB1A51100C7718E /* BusStopInfoResponse.swift in Sources */,
 				BEB38B482BB1A77C00C7718E /* BusStopListDTO.swift in Sources */,
@@ -392,7 +432,9 @@
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NaverMapKit/Info.plist;
+				INFOPLIST_FILE = NaverMapKit/Resources/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "주변 정류장을 찾기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "주변 정류장을 찾기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Resources/LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -421,7 +463,9 @@
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NaverMapKit/Info.plist;
+				INFOPLIST_FILE = NaverMapKit/Resources/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "주변 정류장을 찾기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "주변 정류장을 찾기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Resources/LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
